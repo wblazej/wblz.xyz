@@ -1,6 +1,6 @@
 import './../style/home.scss';
-import Typist from 'react-typist';
-
+import Terminal from '../svg/Terminal';
+import TypingAnimation from './TypingAnimation';
 
 const Home = () => {
     return (
@@ -11,13 +11,18 @@ const Home = () => {
                 <a href="#">Thoughts</a>
             </nav>
             <header>
-                <p className="hi-there">Hi there 👋</p>
-                <p>I'm</p>
-                <h1>Błażej Wrzosok</h1>
+                <div className="name">
+                    <p className="hi-there">Hi there 👋</p>
+                    <p>I'm</p>
+                    <h1>Błażej Wrzosok</h1>
 
-                <p>
-                    <Typist>A software developer</Typist>
-                </p>
+                    <p>
+                        <TypingAnimation text="A software developer" delay={1000} />
+                    </p>
+                </div>
+                <div className="image">
+                    <Terminal/>
+                </div>
             </header>
         </div>
     )
