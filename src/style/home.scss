@@ -1,0 +1,89 @@
+.home-container {
+    padding: 2em;
+    height: calc(100vh - 4em);
+    background: linear-gradient(0deg, #fff, #ffead2);
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+
+        a {
+            text-decoration: none;
+            color: #000;
+            margin: 1em 2em;
+            cursor: pointer;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 2px;
+                width: 0px;
+                background-color: #FF5F6D;
+                transition: width .3s;
+            }
+
+            &:hover {
+                &::after {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    header {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5em;
+        animation: header-animation .5s;
+        
+        h1 {
+            font-family: 'Lato', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            margin: 0;
+            background: -webkit-linear-gradient(#FFC371, #FF5F6D);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+    
+        p {
+            font-size: 2rem;
+            margin: 0;
+            color: #414141;
+        }
+    
+        .hi-there {
+            font-size: 3rem;
+            margin-bottom: 1em;
+            animation: hi-there-animation 1s;
+            animation-delay: .5s;
+            width: fit-content;
+            font-weight: 900;
+
+            @keyframes hi-there-animation {
+                0% { transform: rotate(0deg); }
+                50% { transform: rotate(10deg); }
+                100% { transform: rotate(0deg); }
+            }
+        }
+
+        @keyframes header-animation {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }   
+    }
+}

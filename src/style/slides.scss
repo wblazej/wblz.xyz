@@ -1,0 +1,73 @@
+.cards-container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    #cards {
+        $card-height: 20rem;
+        $card-margin: 5vw;
+        $card-top-offset: 2em;
+        $cards: 3;
+    
+        padding-bottom: calc($cards * $card-top-offset);
+        margin-bottom: $card-margin;
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat($cards, $card-height);
+        gap: $card-margin;
+        
+        .card {
+            &:nth-child(1) { --index: 1; }
+            &:nth-child(2) { --index: 2; }
+            &:nth-child(3) { --index: 3; }
+
+            position: sticky;
+            top: 0;
+            padding-top: calc(var(--index) * $card-top-offset);
+
+            .content {
+                height: $card-height;
+                background-color: #fff;
+                border-radius: 1em;
+                border: 1px solid #ececec;
+                padding: 2em;
+            
+                h1 {
+                    text-align: center;
+                    background: -webkit-linear-gradient(#FFC371, #FF5F6D);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    text-transform: uppercase;
+                    font-weight: 900;
+                    margin: 0;
+                }
+            
+                p.under-header {
+                    margin: 0;
+                    text-align: center;
+                    font-weight: 300;
+                }
+
+                .tech-stack-container {
+                    .technologies {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                
+                        .item {
+                            width: 80px;
+                            height: 80px;
+                            margin: 1em;
+                
+                            svg {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
