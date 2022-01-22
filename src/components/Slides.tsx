@@ -16,42 +16,59 @@ import RubyLogo from '../svg/tech/RubyLogo';
 import RailsLogo from '../svg/tech/RailsLogo';
 import GoogleCloudLogo from '../svg/tech/GoogleCloudLogo';
 import CPlusPlusLogo from '../svg/tech/CPlusPlusLogo';
+import { useState } from 'react';
+import shuffle from '../ts/shuffle';
+import TypingAnimation from './TypingAnimation';
+import CovidWarningAppScreenshot from './../img/projects/covid-warning-app.png';
+import RepositoriesScreenshot from './../img/projects/repositories.png';
+import LinkIcon from '../svg/LinkIcon';
 
 const Slides = () => {
+    const [technologies] = useState(shuffle([CSSLogo, HTMLLogo, ReactLogo, JavaScriptLogo, TypeScriptLogo, 
+                                    PythonLogo, FlaskLogo, MySQLLogo, PostgreSQLLogo, RedisLogo,
+                                    GitLogo, DockerLogo, RubyLogo, RailsLogo, GoogleCloudLogo, CPlusPlusLogo]))
     return (
         <div className="cards-container">
 			<ul id="cards">
-                <li className="card">
+                <li className="card" id="tech-stack">
                     <div className="content">
-                        <div className="header-panel" id="tech-stack">
+                        <div className="header-panel">
                             <div className="header">
                                 <h2>tech stack</h2>
-                                <p>technologies I'm familiar with</p>
+                                <p>
+                                    <TypingAnimation text="technologies I'm familiar with" startOnDisplay={true} delay={1000} />
+                                </p>
                             </div>
                         </div>
                         <div className="card-content">
-                            <div className="item"><CSSLogo /></div>
-                            <div className="item"><HTMLLogo /></div>
-                            <div className="item"><ReactLogo /></div>
-                            <div className="item"><JavaScriptLogo /></div>
-                            <div className="item"><TypeScriptLogo /></div>
-                            <div className="item"><PythonLogo /></div>
-                            <div className="item"><FlaskLogo /></div>
-                            <div className="item"><MySQLLogo /></div>
-                            <div className="item"><PostgreSQLLogo /></div>
-                            <div className="item"><RedisLogo /></div>
-                            <div className="item"><GitLogo /></div>
-                            <div className="item"><DockerLogo /></div>
-                            <div className="item"><RubyLogo /></div>
-                            <div className="item"><RailsLogo /></div>
-                            <div className="item"><GoogleCloudLogo /></div>
-                            <div className="item"><CPlusPlusLogo /></div>
+                            {technologies.map((Icon, i) => <div className="item" key={i}><Icon/></div>)}
                         </div>
                     </div>
                 </li>
-				<li className="card">
+				<li className="card" id="projects">
 					<div className="content">
-						
+                        <div className="header-panel">
+                            <div className="header">
+                                <h2>projects</h2>
+                                <p>
+                                    <TypingAnimation text="public projects I worked on" startOnDisplay={true} delay={1000} />
+                                </p>
+                            </div>
+                        </div>
+                        <div className="card-content">
+                            <div className="item">
+                                <p>Covid Warning App</p>
+                                <a className="preview" href='https://sars2.wsi.edu.pl/' target="_blank" rel="noreferrer" style={{backgroundImage: `url(${CovidWarningAppScreenshot})`}}>
+                                    <div className="on-hover-content"><LinkIcon/></div>
+                                </a>
+                            </div>
+                            <div className="item">
+                                <p>The others</p>
+                                <a className="preview" href='https://github.com/wblazej?tab=repositories' target="_blank" rel="noreferrer" style={{backgroundImage: `url(${RepositoriesScreenshot})`}}>
+                                    <div className="on-hover-content"><LinkIcon/></div>
+                                </a>
+                            </div>
+                        </div>
 					</div>
 				</li>
 				<li className="card">
