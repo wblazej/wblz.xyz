@@ -1,6 +1,6 @@
 import './../style/home.scss';
 import Terminal from '../svg/Terminal';
-import TypingAnimation from './TypingAnimation';
+import TypingAnimation from '../components/TypingAnimation';
 
 const Home = () => {
     return (
@@ -8,7 +8,7 @@ const Home = () => {
             <nav>
                 <a href="#">Tech stack</a>
                 <a href="#">Projects</a>
-                <a href="#">Thoughts</a>
+                <a href="#">About</a>
             </nav>
             <header>
                 <div className="name">

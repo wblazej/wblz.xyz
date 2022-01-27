@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './components/Home';
-import Slides from './components/Slides';
+import Home from './pages/Home';
+import Slides from './pages/Slides';
 import './style/index.scss';
 
 ReactDOM.render(
