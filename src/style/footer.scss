@@ -1,0 +1,108 @@
+footer {
+    background-color: #28323C;
+    color: #fff;
+    margin-top: 10em;
+
+    .content {
+        padding: 2em;
+        padding-top: 5em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-around;
+        // width: 80%;
+        margin: 0 auto;
+
+        .quote {
+            padding-left: 1em;
+            border-bottom: 1px solid #fff;
+            max-width: 400px;
+            padding-bottom: 1em;
+            padding-right: 3em;
+            margin-bottom: 2em;
+
+            .text {
+                position: relative;
+                margin: .5em 0;
+
+                &::before {
+                    content: '❞';
+                    position: absolute;
+                    font-size: 4rem;
+                    left: -.3em;
+                    top: -.7em;
+                    color: #8181814d
+                }
+            }
+
+            .author {
+                font-size: .8rem;
+                position: relative;
+                margin: 0;
+                margin-left: 1em;
+                color: #818181;
+
+                &::before {
+                    content: '~';
+                    position: absolute;
+                    font-size: .8rem;
+                    left: -.8em;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+
+        .links {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .list {
+                display: flex;
+                flex-direction: column;
+                margin-right: 3rem;
+                margin-bottom: 1em;
+
+                h3 {
+                    margin: 0;
+                    margin-bottom: .5em;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                    margin-bottom: 1em;
+                    display: flex;
+                    align-items: center;
+
+                    i {
+                        font-size: 1.5rem;
+                        margin-right: .2em;
+                        width: 1.5em;
+                        text-align: center;
+                    }
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    .binary-text {
+        text-align: center;
+        padding: 2em;
+        color: #818181;
+        font-size: .6rem;
+        user-select: none;
+    }
+
+    .copyright {
+        background-color: #1E242A;
+        padding: 1.5em;
+        text-align: center;
+    }
+}
