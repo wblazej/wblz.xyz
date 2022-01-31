@@ -5,12 +5,12 @@ const PythonLogo = () =>
         <path d="M40.8272 15.7765C40.8272 12.6299 43.4066 10.0853 46.6031 10.0853C49.7873 10.0853 52.379 12.6292 52.379 15.7765C52.379 18.913 49.788 21.4563 46.6031 21.4563C43.4079 21.4563 40.8272 18.9123 40.8272 15.7765ZM75.4892 110.502C75.4892 107.366 78.0803 104.822 81.2651 104.822C84.4603 104.822 87.0411 107.366 87.0411 110.502C87.0411 113.649 84.4616 116.193 81.2651 116.193C78.0809 116.193 75.4892 113.649 75.4892 110.502Z" fill="white" />
         <defs>
             <linearGradient id="paint0_linear_23_33" x1="94.7451" y1="36.8909" x2="0.136633" y2="36.1214" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#366A96" />
-                <stop offset="1" stop-color="#3679B0" />
+                <stop stopColor="#366A96" />
+                <stop offset="1" stopColor="#3679B0" />
             </linearGradient>
             <linearGradient id="paint1_linear_23_33" x1="127.924" y1="79.4364" x2="-59.3557" y2="79.4364" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#FFC836" />
-                <stop offset="1" stop-color="#FFE873" />
+                <stop stopColor="#FFC836" />
+                <stop offset="1" stopColor="#FFE873" />
             </linearGradient>
         </defs>
     </svg>

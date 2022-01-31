@@ -1,5 +1,5 @@
 const Terminal = () => <svg width="1231" height="890" viewBox="0 0 1231 890" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_17_30)">
+<g clipPath="url(#clip0_17_30)">
 <path d="M727.087 153.511C784.541 199.724 827.007 260.925 849.489 325.873C873.22 390.821 874.469 460.765 870.722 533.207C866.975 606.898 856.983 683.087 815.766 735.545C774.549 789.252 703.356 817.979 633.412 826.722C563.468 835.465 494.773 822.975 433.572 799.244C372.371 774.264 317.415 740.541 257.463 695.577C198.76 651.862 133.812 598.155 83.852 518.219C33.892 438.283 -1.08003 330.869 45.133 274.664C92.595 218.459 219.993 212.214 313.668 182.238C407.343 152.262 464.797 97.306 530.994 86.065C595.942 74.824 669.633 107.298 727.087 153.511Z" fill="url(#paint0_linear_17_30)"/>
 <g filter="url(#filter0_d_17_30)">
 <rect x="289" y="36" width="874.228" height="529" rx="15" fill="#404040"/>
@@ -20,8 +20,8 @@ const Terminal = () => <svg width="1231" height="890" viewBox="0 0 1231 890" fil
 <rect x="430.767" y="383.854" width="91.8859" height="19.6898" rx="9.84491" fill="url(#paint10_linear_17_30)"/>
 </g>
 <defs>
-<filter id="filter0_d_17_30" x="264" y="11" width="924.228" height="579" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<filter id="filter0_d_17_30" x="264" y="11" width="924.228" height="579" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feMorphology radius="5" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_17_30"/>
 <feOffset/>
@@ -32,48 +32,48 @@ const Terminal = () => <svg width="1231" height="890" viewBox="0 0 1231 890" fil
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_17_30" result="shape"/>
 </filter>
 <linearGradient id="paint0_linear_17_30" x1="23.526" y1="829.516" x2="763.003" y2="-12.2127" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFC371"/>
-<stop offset="1" stop-color="#FF5F6D"/>
+<stop stopColor="#FFC371"/>
+<stop offset="1" stopColor="#FF5F6D"/>
 </linearGradient>
 <linearGradient id="paint1_linear_17_30" x1="479.335" y1="121.323" x2="479.335" y2="141.012" gradientUnits="userSpaceOnUse">
-<stop stop-color="white"/>
-<stop offset="1" stop-color="#BEBEBE"/>
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#BEBEBE"/>
 </linearGradient>
 <linearGradient id="paint2_linear_17_30" x1="415.671" y1="154.139" x2="415.671" y2="173.829" gradientUnits="userSpaceOnUse">
-<stop stop-color="white"/>
-<stop offset="1" stop-color="#BEBEBE"/>
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#BEBEBE"/>
 </linearGradient>
 <linearGradient id="paint3_linear_17_30" x1="430.767" y1="186.955" x2="430.767" y2="206.645" gradientUnits="userSpaceOnUse">
-<stop stop-color="white"/>
-<stop offset="1" stop-color="#BEBEBE"/>
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#BEBEBE"/>
 </linearGradient>
 <linearGradient id="paint4_linear_17_30" x1="371.697" y1="219.772" x2="371.697" y2="239.462" gradientUnits="userSpaceOnUse">
-<stop stop-color="white"/>
-<stop offset="1" stop-color="#BEBEBE"/>
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#BEBEBE"/>
 </linearGradient>
 <linearGradient id="paint5_linear_17_30" x1="404.514" y1="285.404" x2="404.514" y2="305.094" gradientUnits="userSpaceOnUse">
-<stop stop-color="white"/>
-<stop offset="1" stop-color="#BEBEBE"/>
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#BEBEBE"/>
 </linearGradient>
 <linearGradient id="paint6_linear_17_30" x1="541.03" y1="285.404" x2="541.03" y2="305.094" gradientUnits="userSpaceOnUse">
-<stop stop-color="white"/>
-<stop offset="1" stop-color="#BEBEBE"/>
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#BEBEBE"/>
 </linearGradient>
 <linearGradient id="paint7_linear_17_30" x1="432.736" y1="318.221" x2="432.736" y2="337.911" gradientUnits="userSpaceOnUse">
-<stop stop-color="white"/>
-<stop offset="1" stop-color="#BEBEBE"/>
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#BEBEBE"/>
 </linearGradient>
 <linearGradient id="paint8_linear_17_30" x1="390.731" y1="351.037" x2="390.731" y2="370.727" gradientUnits="userSpaceOnUse">
-<stop stop-color="white"/>
-<stop offset="1" stop-color="#BEBEBE"/>
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#BEBEBE"/>
 </linearGradient>
 <linearGradient id="paint9_linear_17_30" x1="371.697" y1="383.854" x2="371.697" y2="403.543" gradientUnits="userSpaceOnUse">
-<stop stop-color="white"/>
-<stop offset="1" stop-color="#BEBEBE"/>
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#BEBEBE"/>
 </linearGradient>
 <linearGradient id="paint10_linear_17_30" x1="476.71" y1="383.854" x2="476.71" y2="403.543" gradientUnits="userSpaceOnUse">
-<stop stop-color="white"/>
-<stop offset="1" stop-color="#BEBEBE"/>
+<stop stopColor="white"/>
+<stop offset="1" stopColor="#BEBEBE"/>
 </linearGradient>
 <clipPath id="clip0_17_30">
 <rect width="1231" height="890" fill="white"/>
