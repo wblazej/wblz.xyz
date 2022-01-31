@@ -10,20 +10,24 @@ interface IProps {
 const Slider = (props: IProps) => {
     const refferences = useRef<Array<HTMLDivElement | null>>([])
 
-    useEffect(() => {
-        return window.addEventListener('scroll', () => {
-            refferences.current.forEach((element, index) => {
-                let current = element
-                let next = refferences.current[index + 1]
-                if (next && current) {
-                    let scale = round(Math.max(0, Math.min(1, (next.offsetTop - window.scrollY) / 
-                        (window.innerHeight / (props.scrollFactor ? props.scrollFactor : 1.5)))), 2)
+    const onScroll = () => {
+        refferences.current.forEach((element, index) => {
+            let current = element
+            let next = refferences.current[index + 1]
+            if (next && current) {
+                let scale = round(Math.max(0, Math.min(1, (next.offsetTop - window.scrollY) / 
+                    (window.innerHeight / (props.scrollFactor ? props.scrollFactor : 1.5)))), 2)
 
-                    if (current.style.transform !== `scale(${scale})`)
-                        current.style.transform = `scale(${scale})`
-                }
-            })
+                if (current.style.transform !== `scale(${scale})`)
+                    current.style.transform = `scale(${scale})`
+            }
         })
+    }
+
+    useEffect(() => {
+        window.removeEventListener('scroll', onScroll);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
     }, [props.scrollFactor, props.items])
 
     return (
