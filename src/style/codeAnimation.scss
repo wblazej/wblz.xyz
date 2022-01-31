@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+.code-animation-container {
+    .waves {
+        background-image: url('./../svg/waves.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        aspect-ratio: 960/300;
+        width: 100%;
+
+        &.flipped {
+            transform: rotate(180deg);
+        }
+    }
+
+    .code-animation {
+        height: 200vh;
+        background-color: #FFC371;
+        position: relative;
+        padding-top: 25rem;
+    
+        .editor {
+            width: 80%;
+            max-width: 45rem;
+            height: 25rem;
+            background-color: #2c303d;
+            margin: 0 auto;
+            position: sticky;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 1em;
+            border: 1px solid #7a7a7a;
+            box-shadow: 0 0 50px 5px #00000073;
+    
+            .top-bar {
+                display: flex;
+                flex-direction: row;
+                padding: .5em;
+    
+                div {
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    margin: .3em;
+    
+                    &.red { background-color: #FF605C; }
+                    &.yellow { background-color: #FFBD44; }
+                    &.green { background-color: #00CA4E; }
+                }
+            }
+    
+            .content {
+                padding: .5em 1.5em;
+    
+                pre {
+                    background-color: transparent !important;
+                    margin: 0 !important;
+                    padding: 0 !important;
+    
+                    code {
+                        font-family: monospace !important;
+                            line-height: 1rem !important;
+                            font-size: .9rem;
+                        
+                        span {
+                            font-family: monospace !important;
+                            line-height: 1rem !important;
+                            font-size: .9rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
