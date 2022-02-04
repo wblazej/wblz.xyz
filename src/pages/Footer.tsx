@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import randint from '../ts/randint';
 import './../style/footer.scss';
 import { quotes } from './../const/content';
@@ -22,9 +22,9 @@ const Footer = () => {
                 </div>
                 <div className="links">
                     <div className="list">
-                        <a href="#"><i className="fas fa-home"></i>Tech stack</a>
-                        <a href="#"><i className="fas fa-project-diagram"></i>Projects</a>
-                        <a href="#"><i className="fas fa-sticky-note"></i>About</a>
+                        <a href="/"><i className="fas fa-home"></i>Tech stack</a>
+                        <a href="/"><i className="fas fa-project-diagram"></i>Projects</a>
+                        <a href="/"><i className="fas fa-sticky-note"></i>About</a>
                     </div>
                     <div className="list">
                         <ExternalLink url='mailto:blazej.wrzosok@gmail.com' icon='fas fa-envelope' text='blazej.wrzosok@gmail.com' notNewTab={false} />
