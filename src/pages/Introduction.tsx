@@ -37,22 +37,24 @@ const CodeAnimation = () => {
         <section className="main">
             <div className="waves"></div>
             <div className="wrapper">
-                <div className="slides">
-                    <TechStack/>
-                    <About/>
-                    <FindMe/>
-                </div>
-                <div className="code-animation" ref={animationContainer}>
-                    <div className="code-container" ref={editor}>
-                        <div className="top-bar">
-                            <div className="red"></div>
-                            <div className="yellow"></div>
-                            <div className="green"></div>
-                        </div>
-                        <div className="code">
-                            <SyntaxHighlighter language="python" style={theme}>
-                                {code}
-                            </SyntaxHighlighter>
+                <div className="introduction">
+                    <div className="slides">
+                        <TechStack/>
+                        <About/>
+                        <FindMe/>
+                    </div>
+                    <div className="code-animation" ref={animationContainer}>
+                        <div className="code-container" ref={editor}>
+                            <div className="top-bar">
+                                <div className="red"></div>
+                                <div className="yellow"></div>
+                                <div className="green"></div>
+                            </div>
+                            <div className="code">
+                                <SyntaxHighlighter language="python" style={theme}>
+                                    {code}
+                                </SyntaxHighlighter>
+                            </div>
                         </div>
                     </div>
                 </div>

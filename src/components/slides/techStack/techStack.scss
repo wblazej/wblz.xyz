@@ -5,9 +5,16 @@
     margin-top: 1em;
 
     .item {
-        width: 2.8em;
-        height: 2.8em;
-        margin: .7em;
+        width: 2.5em;
+        height: 2.5em;
+        margin-right: .8em;
+        margin-bottom: .8em;
+        position: relative;
+        z-index: 2;
+        background-color: #fff;
+        padding: 1em;
+        border-radius: 50%;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.11);
 
         svg {
             width: 100%;
