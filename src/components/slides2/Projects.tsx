@@ -1,4 +1,4 @@
-import TypingAnimation from './../TypingAnimation';
+import TypingAnimation from '../typingAnimation/TypingAnimation';
 import CovidWarningAppScreenshot from './../../img/projects/covid-warning-app.png';
 import RepositoriesScreenshot from './../../img/projects/repositories.png';
 import LinkIcon from './../../svg/LinkIcon';

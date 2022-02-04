@@ -1,14 +1,14 @@
 import './../style/home.scss';
 import Terminal from '../svg/Terminal';
-import TypingAnimation from '../components/TypingAnimation';
+import TypingAnimation from '../components/typingAnimation/TypingAnimation';
 
 const Home = () => {
     return (
         <div className="home-container">
             <nav>
-                <a href="#">Tech stack</a>
-                <a href="#">Projects</a>
-                <a href="#">About</a>
+                <a href="/">Tech stack</a>
+                <a href="/">Projects</a>
+                <a href="/">About</a>
             </nav>
             <header>
                 <div className="name">

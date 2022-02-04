@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import './../style/typingAnimation.scss';
+import './/typingAnimation.scss';
 import classNames from 'classnames';
-import useOnScreen from './../ts/useOnScreen';
+import useOnScreen from '../../ts/useOnScreen';
 
 interface IProps {
     text: string;
@@ -37,7 +37,7 @@ const TypingAnimation = (props: IProps) => {
                 }, props.delay ? props.delay : 0)
             }
         }
-    }, [props, setPosition, isVisible])
+    }, [props, setPosition, isVisible, startedThread])
 
     return (
         <span className="typing-animation" ref={element}>
