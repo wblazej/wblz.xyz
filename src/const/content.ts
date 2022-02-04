@@ -8,3 +8,15 @@ export const quotes = [
     {quote: "Life is ten percent what happens to you and ninety percent how you respond to it", author: "Charles Swindoll"},
     {quote: "Our greatest fear should not be of failure… but of succeeding at things in life that don’t really matter", author: "Francis Chan"}
 ]
+
+export const code = `for _ in range(int(input())):
+n, s = int(input()), input()
+
+t = set({s[0]})
+for i in range(1, len(s)):
+if s[i] in t and s[i - 1] != s[i]:
+    print("NO")
+    break
+t.add(s[i])
+else:
+print("YES")`

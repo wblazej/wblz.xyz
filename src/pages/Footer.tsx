@@ -1,21 +1,8 @@
 import { useEffect, useState } from 'react';
 import randint from '../ts/randint';
 import './../style/footer.scss';
-import { quotes } from './../const/quotes';
-
-interface ExternalLinkProps {
-    url: string;
-    icon: string;
-    text: string;
-    notNewTab?: boolean;
-}
-
-const ExternalLink = (props: ExternalLinkProps) => (
-    <a href={props.url} rel="noreferrer" target={props.notNewTab ? "_self" : "_blank" }>
-        <i className={props.icon}></i>
-        <span>{props.text}</span>
-    </a>
-)
+import { quotes } from './../const/content';
+import ExternalLink from '../components/ExternalLink';
 
 const Footer = () => {
     const [quoteIndex, setQuoteIndex] = useState(randint(0, quotes.length - 1))

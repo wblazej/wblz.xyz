@@ -1,0 +1,17 @@
+.slide-content#tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-top: 1em;
+
+    .item {
+        width: 2.8em;
+        height: 2.8em;
+        margin: .7em;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
