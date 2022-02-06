@@ -22,7 +22,7 @@
     background-color: #0e1725d9;
     backdrop-filter: blur(10px);
     animation: nav-bar $animation-time;
-    z-index: 1;
+    z-index: 5;
     transition: box-shadow .3s;
     
     &.down {

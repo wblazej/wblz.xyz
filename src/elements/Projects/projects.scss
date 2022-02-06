@@ -1,0 +1,60 @@
+@import './../../style/variables';
+
+section.projects {
+    .section-content {
+        .project {
+            display: flex;
+            align-items: center;
+            margin-top: 2em;
+            margin-bottom: 2em;
+            flex-wrap: wrap;
+
+            .description {
+                z-index: 1;
+                flex: .8;
+                
+                h4 {
+                    color: $accent-color;
+                    font-size: 1.5rem;
+                    margin: 0;
+                    font-weight: 400;
+                }
+
+                p {
+                    background-color: #1c2138;
+                    padding: 1.5em;
+                    border-radius: .5em;
+                    box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.226);
+                    width: 120%;
+                }
+
+                .tags {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+
+                    span {
+                        display: block;
+                        background-color: #5cc071;
+                        font-size: .8rem;
+                        border-radius: 10em;
+                        padding: .4em .8em;
+                        margin: .3em;
+                        font-family: 'Inconsolata', monospace;
+                    }
+                }
+            }
+
+            .preview {
+                flex: 1;
+                min-width: 300px;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: .5em;
+                }
+            }
+        }
+    }
+}
