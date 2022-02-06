@@ -19,7 +19,15 @@
     position: fixed;
     display: flex;
     flex-direction: row;
+    background-color: #0e1725d9;
+    backdrop-filter: blur(10px);
     animation: nav-bar $animation-time;
+    z-index: 1;
+    transition: box-shadow .3s;
+    
+    &.down {
+        box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.226);
+    }
 
     nav {
         display: flex;

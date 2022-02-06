@@ -8,6 +8,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: 5em;
+    padding-right: 5em;
 
     p {
         @include keyframes-animation(greetings) {
@@ -80,7 +82,7 @@ header {
         outline: none;
         border: 1px solid $accent-color;
         font-family: 'Inconsolata', monospace;
-        margin: 5em auto 0 auto;
+        margin: 5em auto 0em auto;
         font-size: 1rem;
         cursor: pointer;
         color: #b9b9b9;

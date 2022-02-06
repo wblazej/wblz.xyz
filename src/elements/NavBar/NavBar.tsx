@@ -1,8 +1,20 @@
+import { useEffect, useState } from 'react';
 import './navBar.scss';
+import classNames from 'classnames';
 
 const NavBar = () => {
+    const [isDown, setIsDown] = useState(window.scrollY > 50)
+
+    const onScroll = () => setIsDown(window.scrollY > 50)
+
+    useEffect(() => {
+        window.removeEventListener('scroll', onScroll);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', () => onScroll);
+    }, [])
+
     return (
-        <div className="nav-bar">
+        <div className={classNames("nav-bar", isDown && "down")}>
             <nav>
                 <div className="sections">
                     <div className="section">
