@@ -32,10 +32,6 @@ const Footer = () => {
                         <ExternalLink url='https://stackoverflow.com/users/13574070' icon='fab fa-stack-overflow' text='blazej' />
                         <ExternalLink url='https://twitter.com/wblazej_' icon='fab fa-twitter' text='wblazej_' />
                     </div>
-                    <div className="list">
-                        <ExternalLink url='https://unsplash.com/collections/QxcMxZSggS4/personal-website' icon='fab fa-unsplash' text='Photos credits' />
-                        <ExternalLink url='https://fontawesome.com' icon='fab fa-font-awesome-flag' text='Icons credits' />
-                    </div>
                 </div>
             </div>
             <div className="copyright">&copy; {new Date().getFullYear()} Błażej Wrzosok</div>

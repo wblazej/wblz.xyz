@@ -7,8 +7,9 @@ const Home = () => {
         <div className="home-container">
             <nav>
                 <a href="/">Tech stack</a>
-                <a href="/">Projects</a>
                 <a href="/">About</a>
+                <a href="/">Find me</a>
+                <a href="/">Projects</a>
             </nav>
             <header>
                 <div className="name">
