@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import randint from '../ts/randint';
-import './../style/footer.scss';
-import { quotes } from './../const/content';
-import ExternalLink from '../components/ExternalLink';
+import randint from '../../ts/randint';
+import './footer.scss';
+import { quotes } from '../../const/content';
+import ExternalLink from '../../components/ExternalLink';
 
 const Footer = () => {
     const [quoteIndex, setQuoteIndex] = useState(randint(0, quotes.length - 1))

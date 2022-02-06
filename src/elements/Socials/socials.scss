@@ -1,0 +1,92 @@
+@import './../../style/variables';
+@import './../../style/utils';
+
+.socials {
+    position: fixed;
+    left: 0;
+    padding: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: socials $animation-time;
+
+    @include keyframes-animation(socials) {
+        0%, 30% {
+            left: -100%;
+        }
+        40% {
+            left: 0;
+        }
+    }
+
+    &::before, &::after {
+        position: absolute;
+        content: '';
+        height: 5em;
+        width: 1px;
+        background-color: #575757;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &::before {
+        @include keyframes-animation(socials-sudo-elements) {
+            0%, 40% {
+                height: 0;
+                top: 0;
+            }
+            50% {
+                height: 5em;
+                top: -5em;
+            }
+        }
+
+        top: -5em;
+        animation: socials-sudo-elements $animation-time;
+    }
+    &::after {
+        @include keyframes-animation(socials-sudo-elements2) {
+            0%, 40% {
+                height: 0;
+                bottom: 0;
+            }
+            50% {
+                height: 5em;
+                bottom: -5em;
+            }
+        }
+
+        bottom: -5em;
+        animation: socials-sudo-elements2 $animation-time;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            font-size: 1.5rem;
+            margin: .5em;
+            text-align: center;
+
+            a {
+                color: $secondary-color;
+                transition: color .3s;
+
+                i {
+                    transition: transform .3s;
+                }
+            }
+
+            &:hover {
+                a {
+                    color: $accent-color;
+
+                    i {
+                        transform: translateY(-3px);
+                    }
+                }
+            }
+        }
+    }
+}

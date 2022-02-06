@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Footer from './pages/Footer';
-// import './style/index.scss';
-import App from './pages/App';
+import './style/index.scss';
+import Home from './elements/Home/Home';
+import NavBar from './elements/NavBar/NavBar';
+import Socials from './elements/Socials/Socials';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App/>
-		{/* <Footer/> */}
+		<NavBar/>
+		<Socials/>
+		<Home/>
 	</React.StrictMode>,
 	document.getElementById('root')
 );

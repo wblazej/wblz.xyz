@@ -1,0 +1,109 @@
+@import './../../style/variables';
+@import './../../style/utils';
+
+.nav-bar {
+    @include keyframes-animation(nav-bar) {
+        0%, 20% {
+            transform: translateY(-5em);
+        }
+        30% {
+            transform: translateY(0px);
+        }
+    }
+
+    top: 0;
+    left: 0;
+    padding: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    animation: nav-bar $animation-time;
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin: 0 auto;
+        position: relative;
+        padding-top: 2em;
+
+        .sections {
+            display: flex;
+
+            .section {
+                margin: 0 10vw;
+    
+                &:first-child {
+                    margin-left: 0;
+                }
+    
+                &:last-child {
+                    margin-right: 0;
+                }
+                
+                a {
+                    width: 10px;
+                    height: 10px;
+                    background-color: $accent-color;
+                    border-radius: 50%;
+                    position: relative;
+                    display: block;
+                    text-decoration: none;
+                    color: $secondary-color;
+    
+                    &::after {
+                        @include keyframes-animation(step-pulsing-point) {
+                            from {
+                                top: 0;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                opacity: 1;
+                            }
+                            to {
+                                top: -5px;
+                                bottom: -5px;
+                                left: -5px;
+                                right: -5px;
+                                opacity: 0;
+                            }
+                        }
+
+                        position: absolute;
+                        content: '';
+                        border-radius: 50%;
+                        border: 1px solid $accent-color;
+                        animation: step-pulsing-point 1s infinite linear;
+                    }
+
+                    span {
+                        @include keyframes-animation(step-tooltip) {
+                            0%, 25% {
+                                opacity: 0;
+                            }
+                            50% {
+                                opacity: 1;
+                            }
+                        }
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        bottom: calc(100% + .5em);
+                        animation: step-tooltip $animation-time;
+                    }
+                }
+            }
+        }
+
+        .progress-bar {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: $accent-color;
+            bottom: 4px;
+        }
+    }
+}
