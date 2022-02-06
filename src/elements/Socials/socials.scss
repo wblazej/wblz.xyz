@@ -23,7 +23,7 @@
         content: '';
         height: 5em;
         width: 1px;
-        background-color: #575757;
+        background-color: $border-color;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -70,7 +70,7 @@
             text-align: center;
 
             a {
-                color: $secondary-color;
+                color: $primary-font-color;
                 transition: color .3s;
 
                 i {

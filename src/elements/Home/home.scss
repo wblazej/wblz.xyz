@@ -55,8 +55,9 @@ header {
                 visibility: hidden;
             }
         }
+        
         font-size: 2rem;
-        color: #b9b9b9;
+        color: $secondary-font-color;
         margin: 0;
         margin-top: .3em;
         font-family: 'Inconsolata', monospace;
@@ -75,6 +76,7 @@ header {
                 opacity: 1;
             }
         }
+
         width: fit-content;
         padding: 1em 2em;
         background-color: none;
@@ -85,13 +87,13 @@ header {
         margin: 5em auto 0em auto;
         font-size: 1rem;
         cursor: pointer;
-        color: #b9b9b9;
+        color: $secondary-font-color;
         transition: color .3s, box-shadow .3s;
         border-radius: 5px;
         animation: explore-button $animation-time;
 
         &:hover {
-            color: $secondary-color;
+            color: $primary-font-color;
             box-shadow: 3px 3px 0 0 $accent-color;
         }
     }

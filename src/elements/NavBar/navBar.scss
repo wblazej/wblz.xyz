@@ -59,7 +59,7 @@
                     position: relative;
                     display: block;
                     text-decoration: none;
-                    color: $secondary-color;
+                    color: $primary-font-color;
     
                     &::after {
                         @include keyframes-animation(step-pulsing-point) {
