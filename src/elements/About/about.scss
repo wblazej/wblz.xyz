@@ -1,0 +1,53 @@
+@import './../../style/variables';
+@import './../../style/utils';
+
+section.about {
+    .section-content {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .text {
+            flex: 1;
+            min-width: 10em;
+
+            h4 {
+                font-weight: 400;
+                margin-bottom: 0;
+            }
+
+            p {
+                margin-top: 0;
+            }
+        }
+        
+        .profile-picutre {
+            width: 15em;
+            height: auto;
+            position: relative;
+            margin-left: 2em;
+            margin-top: 2em;
+            margin-bottom: 2em;
+
+            &::after {
+                position: absolute;
+                content: '';
+                border-radius: 50%;
+                border: 3px solid $accent-color;
+                top: -.5em;
+                bottom: -.5em;
+                left: -.5em;
+                right: -.5em;
+                animation: profile-picture-pulsing 3s infinite linear;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                user-select: none;
+            }
+        }
+    }
+}

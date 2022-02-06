@@ -10,3 +10,28 @@ body {
     height: 200rem;
     font-weight: 300;
 }
+
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 5em;
+    padding-right: 5em;
+
+    .header {
+        display: flex;
+        align-items: center;
+
+        h3 {
+            font-size: 2rem;
+            position: relative;
+            margin: .5em 0;
+        }
+
+        .break-line {
+            height: 1px;
+            background-color: $border-color;
+            flex: 1;
+            margin-left: 2em;
+        }
+    }
+}
