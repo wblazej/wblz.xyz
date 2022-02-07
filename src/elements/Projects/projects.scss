@@ -21,10 +21,10 @@ section.projects {
                 }
 
                 p {
-                    background-color: #1c2138;
+                    background-color: $secondary-color;
                     padding: 1.5em;
                     border-radius: .5em;
-                    box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.226);
+                    box-shadow: 0 0 30px 1px $box-shadow-color;
                     width: 120%;
                 }
 
@@ -45,6 +45,7 @@ section.projects {
             }
 
             .preview {
+                display: block;
                 flex: 1;
                 min-width: 300px;
                 aspect-ratio: 16 / 10;
@@ -104,6 +105,14 @@ section.projects {
 
                     .tags {
                         justify-content: flex-end;
+                    }
+                }
+
+                .preview {
+                    &:hover {
+                        box-shadow: -10px 10px 0 0 $accent-color;
+                        transform: translate(5px, -5px);
+                        background-size: 105%;
                     }
                 }
             }

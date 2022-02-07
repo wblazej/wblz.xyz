@@ -21,11 +21,22 @@ const Project = (props: IProps) => {
                     {props.tags.map((tag, i) => <div key={i}>{tag}</div>)}
                 </div>
             </div>
-            <div className="preview" style={{ backgroundImage: `url(${props.previewURL})` }}></div>
+
+            <a href={props.website} target="_blank" rel="norefferer" className="preview" 
+                style={{ backgroundImage: `url(${props.previewURL})` }}></a>
+
             <div className="links">
-                <div className="item"><a href={props.website} target="_blank" rel="norefferer"><i className="fas fa-link"></i></a></div>
+                <div className="item">
+                    <a href={props.website} target="_blank" rel="norefferer">
+                        <i className="fas fa-link"></i>
+                    </a>
+                </div>
                 {props.repo &&
-                    <div className="item"><a href={props.repo} target="_blank" rel="norefferer"><i className="fab fa-github"></i></a></div>
+                    <div className="item">
+                        <a href={props.repo} target="_blank" rel="norefferer">
+                            <i className="fab fa-github"></i>
+                        </a>
+                    </div>
                 }
             </div>
         </div>
