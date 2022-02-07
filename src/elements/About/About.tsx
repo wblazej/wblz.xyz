@@ -19,7 +19,7 @@ const About = () => {
                     <p>React.js, Sass, Node.js, Flask, Ruby on Rails</p>
 
                     <h4>Tools & Platforms</h4>
-                    <p>Git, Docker, Google Cloud Platform, GitHub</p>
+                    <p>Git, Docker, Google Cloud Platform, GitHub, Figma</p>
                     
                     <h4>Operating System</h4>
                     <p>macOS Monterey 12.1</p>
