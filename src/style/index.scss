@@ -6,7 +6,7 @@ body {
     margin: 0;
     background-color: $primary-color;
     color: $primary-font-color;
-    font-family: 'Lato', sans-serif;
+    font-family: $primary-font;
     font-weight: 300;
 }
 
@@ -33,5 +33,28 @@ section {
             flex: 1;
             margin-left: 2em;
         }
+    }
+}
+
+.btn {
+    padding: 1em 2em;
+    background-color: none;
+    background: transparent;
+    outline: none;
+    border: 1px solid $accent-color;
+    font-family: $secondary-font;
+    margin: 0 auto;
+    font-size: 1rem;
+    cursor: pointer;
+    color: $secondary-font-color;
+    transition: color .3s, box-shadow .3s;
+    border-radius: 5px;
+    text-decoration: none;
+    width: fit-content;
+    display: block;
+
+    &:hover {
+        color: $primary-font-color;
+        box-shadow: 3px 3px 0 0 $accent-color;
     }
 }

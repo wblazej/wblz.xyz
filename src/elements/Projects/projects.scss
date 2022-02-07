@@ -39,7 +39,7 @@ section.projects {
                         border-radius: 10em;
                         padding: .4em .8em;
                         margin: .3em;
-                        font-family: 'Inconsolata', monospace;
+                        font-family: $secondary-font;
                     }
                 }
             }
@@ -116,6 +116,13 @@ section.projects {
                     }
                 }
             }
+        }
+
+        p.bottom-info {
+            text-align: center;
+            font-family: $secondary-font;
+            color: $secondary-font-color;
+            margin-top: 5em;
         }
     }
 }

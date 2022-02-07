@@ -70,6 +70,10 @@ const Projects = () => {
                     repo="https://github.com/wblazej/vocabulary"
                     previewURL={VocabularyPreview}
                 />
+
+                <a target="_blank" rel="norefferer" className="btn" href="https://github.com/wblazej?tab=repositories">See others</a>
+
+                <p className="bottom-info">Other than that, I currentlly got 3 projects that are in building process...</p>
             </div>
         </section>
     )
