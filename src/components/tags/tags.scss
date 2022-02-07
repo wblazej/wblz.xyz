@@ -1,5 +1,17 @@
-.tag.python { background-color: #4571a1; }
-.tag.reactjs { background-color: #61dbfb; color: #000; }
-.tag.covid { background-color: #cf5252; }
-.tag.web-scrapping { background-color: #353535; }
-.tag.closed-source { background-color: #db8844; color: #000; }
+@mixin tag-color($base-color) {
+    $opacity: 60;
+    background-color: #{$base-color}#{$opacity};
+    border: 1px solid $base-color;
+}
+
+.tag.python { @include tag-color(#4571a1); }
+.tag.reactjs { @include tag-color(#61dbfb); }
+.tag.covid { @include tag-color(#cf5252); }
+.tag.web-scrapping { @include tag-color(#353535); }
+.tag.closed-source { @include tag-color(#db8844); }
+.tag.github-api { @include tag-color(#ffffff); }
+.tag.college { @include tag-color(#2d40ac); }
+.tag.nextjs { @include tag-color(#dde971); }
+.tag.typescript { @include tag-color(#3178c6); }
+.tag.learning { @include tag-color(#38be7f); }
+.tag.sass { @include tag-color(#c69699); }

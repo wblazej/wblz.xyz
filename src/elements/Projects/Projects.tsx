@@ -1,43 +1,21 @@
 import './projects.scss';
+
 import CovidWarningAppPreview from './../../img/projects/covid-warning-app.png';
+import GitGistPreview from './../../img/projects/git-gist.png';
+import VocabularyPreview from './../../img/projects/vocabulary.png';
+
 import Python from '../../components/tags/Python';
 import Reactjs from '../../components/tags/Reactjs';
 import Covid from '../../components/tags/Covid';
 import WebScrapping from '../../components/tags/WebScrapping';
 import ClosedSource from '../../components/tags/ClosedSource';
-import { ReactElement } from 'react';
-import classNames from 'classnames';
-
-interface IProps {
-    title: string;
-    description: string;
-    tags: Array<ReactElement>;
-    previewURL: string;
-    website: string;
-    repo?: string;
-    fromRight?: boolean;
-}
-
-const Project = (props: IProps) => {
-    return (
-        <div className={classNames("project", props.fromRight && "from-right")}>
-            <div className="description">
-                <h4>{props.title}</h4>
-                <p>{props.description}</p>
-                <div className="tags">
-                    {props.tags.map((tag, i) => <div key={i}>{tag}</div>)}
-                </div>
-            </div>
-            <div className="preview" style={{ backgroundImage: `url(${props.previewURL})` }}></div>
-            <div className="links">
-                <div className="item"><a href={props.website} target="_blank" rel="norefferer"><i className="fas fa-link"></i></a></div>
-                {props.repo &&
-                    <div className="item"><a href={props.repo} target="_blank" rel="norefferer"><i className="fab fa-github"></i></a></div>
-                }
-            </div>
-        </div>
-    )
-}
+import Project from '../../components/Project';
+import GitHubAPI from '../../components/tags/GitHubAPI';
+import College from '../../components/tags/College';
+import Nextjs from '../../components/tags/Nextjs';
+import TypeScript from '../../components/tags/TypeScript';
+import Learning from '../../components/tags/Learning';
+import Sass from '../../components/tags/Sass';
 
 const Projects = () => {
     return (
@@ -52,7 +30,9 @@ const Projects = () => {
                     description="Introduces the current situation of SARS-CoV-2 pandemic in particular districts in Poland. Made to be easy and simple for end users, no complex data and charts. Created during apprenticeships."
                     tags={[
                         <Reactjs />,
+                        <TypeScript />,
                         <Python />,
+                        <Sass />,
                         <Covid />,
                         <WebScrapping />,
                         <ClosedSource />
@@ -62,19 +42,33 @@ const Projects = () => {
                 />
 
                 <Project
-                    title="Covid Warning App"
-                    description="Introduces the current situation of SARS-CoV-2 pandemic in particular districts in Poland. Made to be easy and simple for end users, no complex data and charts. Created during apprenticeships."
+                    title="GitGist"
+                    description="Uses GitHub API to list, view, create, edit and delete gists. It's just a client for GitHub Gist app. Project for college finals."
                     tags={[
                         <Reactjs />,
-                        <Python />,
-                        <Covid />,
-                        <WebScrapping />,
-                        <ClosedSource />
+                        <TypeScript />,
+                        <GitHubAPI />,
+                        <College />
                     ]}
-                    website="https://sars2.wsi.edu.pl/"
-                    repo="https://github.com/wblazej"
-                    previewURL={CovidWarningAppPreview}
+                    website="https://wblazej.github.io/GitGist/"
+                    repo="https://github.com/wblazej/GitGist"
+                    previewURL={GitGistPreview}
                     fromRight={true}
+                />
+
+                <Project
+                    title="Vocabulary"
+                    description="Tool for learning new vocabulary in foreign languages. Capable of creating games with words in multiple languages. Still in progress... already able to be used tho."
+                    tags={[
+                        <Reactjs />,
+                        <TypeScript />,
+                        <Sass />,
+                        <Nextjs />,
+                        <Learning />
+                    ]}
+                    website="https://quiz.v.fkrq.xyz/"
+                    repo="https://github.com/wblazej/vocabulary"
+                    previewURL={VocabularyPreview}
                 />
             </div>
         </section>
