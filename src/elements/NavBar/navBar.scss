@@ -100,6 +100,7 @@
                         transform: translateX(-50%);
                         bottom: calc(100% + .5em);
                         animation: step-tooltip $animation-time;
+                        cursor: pointer;
                     }
                 }
             }

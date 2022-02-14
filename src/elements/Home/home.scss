@@ -64,7 +64,7 @@ header {
         animation: title $animation-time;
     }
 
-    button {
+    .btn {
         @include keyframes-animation(explore-button) {
             0%, 70% {
                 transform: translateY(50px);
@@ -77,18 +77,7 @@ header {
         }
 
         width: fit-content;
-        padding: 1em 2em;
-        background-color: none;
-        background: transparent;
-        outline: none;
-        border: 1px solid $accent-color;
-        font-family: $secondary-font;
         margin: 5em auto 0em auto;
-        font-size: 1rem;
-        cursor: pointer;
-        color: $secondary-font-color;
-        transition: color .3s, box-shadow .3s;
-        border-radius: 5px;
         animation: explore-button $animation-time;
 
         &:hover {
