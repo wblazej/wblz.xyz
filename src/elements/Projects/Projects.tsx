@@ -16,6 +16,7 @@ import Nextjs from '../../components/tags/Nextjs';
 import TypeScript from '../../components/tags/TypeScript';
 import Learning from '../../components/tags/Learning';
 import Sass from '../../components/tags/Sass';
+import TypingAnimation from '../../components/typingAnimation/TypingAnimation';
 
 const Projects = () => {
     return (
@@ -72,8 +73,6 @@ const Projects = () => {
                 />
 
                 <a target="_blank" rel="norefferer" className="btn" href="https://github.com/wblazej?tab=repositories">See others</a>
-
-                <p className="bottom-info">Other than that, I currentlly got 3 projects that are in building process...</p>
             </div>
         </section>
     )

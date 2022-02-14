@@ -34,7 +34,7 @@ const NavBar = () => {
                     </div>
                     <div className="section">
                         <a href="/">
-                            <span>Footer</span>
+                            <span>Contact</span>
                         </a>
                     </div>
                 </div>

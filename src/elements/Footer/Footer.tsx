@@ -2,39 +2,36 @@ import { useState } from 'react';
 import randint from '../../ts/randint';
 import './footer.scss';
 import { quotes } from '../../const/content';
-import ExternalLink from '../../components/ExternalLink';
+import toast from 'react-hot-toast';
 
 const Footer = () => {
     const [quoteIndex, setQuoteIndex] = useState(randint(0, quotes.length - 1))
 
     return (
         <footer>
-            <div className="content">
-                <div className="quote" onClick={() => setQuoteIndex((): number => {
-                    while (true) {
-                        let index: number = randint(0, quotes.length - 1)
-                        if (index !== quoteIndex)
-                            return index
-                    }
-                })}>
-                    <p className="text">{quotes[quoteIndex].quote}</p>
-                    <p className="author">{quotes[quoteIndex].author}</p>
-                </div>
-                <div className="links">
-                    <div className="list">
-                        <a href="/"><i className="fas fa-home"></i>Tech stack</a>
-                        <a href="/"><i className="fas fa-project-diagram"></i>Projects</a>
-                        <a href="/"><i className="fas fa-sticky-note"></i>About</a>
-                    </div>
-                    <div className="list">
-                        <ExternalLink url='mailto:blazej.wrzosok@gmail.com' icon='fas fa-envelope' text='blazej.wrzosok@gmail.com' notNewTab={false} />
-                        <ExternalLink url='https://github.com/wblazej' icon='fab fa-github' text='wblazej' />
-                        <ExternalLink url='https://stackoverflow.com/users/13574070' icon='fab fa-stack-overflow' text='blazej' />
-                        <ExternalLink url='https://twitter.com/wblazej_' icon='fab fa-twitter' text='wblazej_' />
-                    </div>
+            <div className="header">
+                <h3>Share feedback</h3>
+                <div className="break-line"></div>
+            </div>
+
+            <div className="section-content">
+                <p>I'd love to hear from you. Share some feedback or just say hello</p>
+
+                <div className="buttons">
+                    <a className='btn' href="mailto:blazej.wrzosok@gmail.com">Send e-mail</a>
+
+                    <button onClick={() => {
+                        navigator.clipboard.writeText("blazej.wrzosok@gmail.com")
+                        toast.success('Copied to your clipboard')
+                    }} className='btn'>Copy e-mail</button>
                 </div>
             </div>
-            <div className="copyright">&copy; {new Date().getFullYear()} Błażej Wrzosok</div>
+
+            <div className="copyright">
+                <span>&copy; {new Date().getFullYear()} Błażej Wrzosok</span>
+                <span><a href="https://github.com/wblazej/personal-website" target="_blank" rel="norefferer">Source code</a></span>
+                <span>blazej.wrzosok@gmail.com</span>
+            </div>
         </footer>
     )
 }
