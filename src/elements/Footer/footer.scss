@@ -1,60 +1,29 @@
 @import './../../style/variables';
 
 footer {
-    margin-bottom: 0;
+    padding: 1.5em;
+    text-align: center;
+    padding-top: 10em;
 
-    .section-content {
-        h4 {
-            text-align: center;
-            font-weight: bold;
-            font-size: 2rem;
-            margin: 0;
-            color: $secondary-font-color;
-            font-family: $secondary-font
+    span {
+        padding: 1em;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '•';
+            top: 50%;
+            transform: translateY(-50%);
+            right: -4px;   
         }
 
-        p {
-            text-align: center;
-            font-size: 1.1rem;
+        &:last-child::after {
+            content: '';
         }
 
-        .buttons {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 2em auto;
-
-            .btn {
-                margin: .5em;
-            }
-        }
-    }
-
-    .copyright {
-        padding: 1.5em;
-        text-align: center;
-        margin-top: 10em;
-
-        span {
-            padding: 1em;
-            position: relative;
-
-            &::after {
-                position: absolute;
-                content: '•';
-                top: 50%;
-                transform: translateY(-50%);
-                right: -4px;   
-            }
-
-            &:last-child::after {
-                content: '';
-            }
-
-            a {
-                color: #fff;
-                text-decoration: none;
-            }
+        a {
+            color: #fff;
+            text-decoration: none;
         }
     }
 }

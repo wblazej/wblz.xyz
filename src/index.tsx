@@ -10,6 +10,7 @@ import Socials from './elements/Socials/Socials';
 import About from './elements/About/About';
 import Projects from './elements/Projects/Projects';
 import Footer from './elements/Footer/Footer';
+import Contact from './elements/Contact/Contact';
 
 ReactDOM.render(
 	<React.StrictMode>
@@ -19,7 +20,9 @@ ReactDOM.render(
 		<Element name="home"><Home/></Element>
 		<Element name="about"><About/></Element>
 		<Element name="projects"><Projects/></Element>
-		<Element name="footer"><Footer/></Element>
+		<Element name="contact"><Contact/></Element>
+
+		<Footer/>
 		
 		<Toaster 
 			position='bottom-center'
