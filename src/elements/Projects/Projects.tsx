@@ -16,7 +16,6 @@ import Nextjs from '../../components/tags/Nextjs';
 import TypeScript from '../../components/tags/TypeScript';
 import Learning from '../../components/tags/Learning';
 import Sass from '../../components/tags/Sass';
-import TypingAnimation from '../../components/typingAnimation/TypingAnimation';
 
 const Projects = () => {
     return (
@@ -72,7 +71,7 @@ const Projects = () => {
                     previewURL={VocabularyPreview}
                 />
 
-                <a target="_blank" rel="norefferer" className="btn" href="https://github.com/wblazej?tab=repositories">See others</a>
+                <a target="_blank" rel="noreferrer" className="btn" href="https://github.com/wblazej?tab=repositories">See others</a>
             </div>
         </section>
     )

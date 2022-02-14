@@ -25,7 +25,7 @@ const About = () => {
                     <p>macOS Monterey 12.1</p>
                 </div>
                 <div className="profile-picutre">
-                    <img src={ProfilePicture} />
+                    <img src={ProfilePicture} alt="profile" />
                 </div>
             </div>
         </section>

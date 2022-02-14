@@ -22,18 +22,18 @@ const Project = (props: IProps) => {
                 </div>
             </div>
 
-            <a href={props.website} target="_blank" rel="norefferer" className="preview" 
-                style={{ backgroundImage: `url(${props.previewURL})` }}></a>
+            <a href={props.website} target="_blank" rel="noreferrer" className="preview" 
+                style={{ backgroundImage: `url(${props.previewURL})` }}><div></div></a>
 
             <div className="links">
                 <div className="item">
-                    <a href={props.website} target="_blank" rel="norefferer">
+                    <a href={props.website} target="_blank" rel="noreferrer">
                         <i className="fas fa-link"></i>
                     </a>
                 </div>
                 {props.repo &&
                     <div className="item">
-                        <a href={props.repo} target="_blank" rel="norefferer">
+                        <a href={props.repo} target="_blank" rel="noreferrer">
                             <i className="fab fa-github"></i>
                         </a>
                     </div>

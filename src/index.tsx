@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Toaster } from 'react-hot-toast';
-import { Element, Link } from 'react-scroll';
+import { Element } from 'react-scroll';
 import './style/index.scss';
 
 import Home from './elements/Home/Home';
