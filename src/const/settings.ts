@@ -1,0 +1,7 @@
+export const EMAIL = "blazej.wrzosok@gmail.com"
+export const DISCORD = "wblazej#6957"
+export const GITHUB = "https://github.com/wblazej"
+export const STACKOVERFLOW = "https://stackoverflow.com/users/13574070"
+export const TWITTER = "https://twitter.com/wblazej_"
+export const GOOGLE_CLOUD = "https://www.cloudskillsboost.google/public_profiles/462083fe-41bc-4543-84db-1b0c42698c09"
+export const REPO = "https://github.com/wblazej/personal-website"

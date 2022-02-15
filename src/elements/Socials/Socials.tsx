@@ -6,29 +6,30 @@ import StackoverflowLogo from '../../icons/StackoverflowLogo';
 import TwitterLogo from '../../icons/TwitterLogo';
 import './socials.scss';
 import toast from 'react-hot-toast';
+import { DISCORD, EMAIL, GITHUB, GOOGLE_CLOUD, STACKOVERFLOW, TWITTER } from '../../const/settings';
 
 const Socials = () => {
     return (
         <div className="socials">
-            <a className="social-icon" href="https://github.com/wblazej" target="_blank" rel="noreferrer">
+            <a className="social-icon" href={GITHUB} target="_blank" rel="noreferrer">
                 <GitHubLogo/>
             </a>
             <div className="social-icon" onClick={() => {
-                navigator.clipboard.writeText("wblazej#6957")
-                toast.success('Copied Discord username to your clipboard')
+                navigator.clipboard.writeText(DISCORD)
+                toast.success('Copied Discord username to your clipboard!')
             }}>
                 <DiscordLogo/>
             </div>
-            <a className="social-icon" href="https://stackoverflow.com/users/13574070" target="_blank" rel="noreferrer">
+            <a className="social-icon" href={STACKOVERFLOW} target="_blank" rel="noreferrer">
                 <StackoverflowLogo/>
             </a>
-            <a className="social-icon" href="https://twitter.com/wblazej_" target="_blank" rel="noreferrer">
+            <a className="social-icon" href={TWITTER} target="_blank" rel="noreferrer">
                 <TwitterLogo/>
             </a>
-            <a className="social-icon" href="mailto:blazej.wrzosok@gmail.com" rel="noreferrer">
+            <a className="social-icon" href={`mailto:${EMAIL}`} rel="noreferrer">
                 <Email/>
             </a>
-            <a className="social-icon" href="https://www.cloudskillsboost.google/public_profiles/462083fe-41bc-4543-84db-1b0c42698c09" rel="noreferrer" target="_blank">
+            <a className="social-icon" href={GOOGLE_CLOUD} rel="noreferrer" target="_blank">
                 <GoogleCloudPlatformLogo/>
             </a>
         </div>
