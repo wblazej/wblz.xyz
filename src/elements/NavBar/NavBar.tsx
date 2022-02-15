@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './navBar.scss';
 import classNames from 'classnames';
-import { Link, Button } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 const NavBar = () => {
     const [isDown, setIsDown] = useState(window.scrollY > 50)
