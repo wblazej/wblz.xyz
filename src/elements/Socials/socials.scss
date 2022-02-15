@@ -69,20 +69,23 @@
             margin: .5em;
             text-align: center;
 
-            a {
-                color: $primary-font-color;
-                transition: color .3s;
+            .social-icon {
+                width: 1em;
+                height: 1em;
+                display: block;
+                text-decoration: none;
+                margin: .3em;
 
-                i {
+                svg {
+                    @include svg-primary-color;
+                    height: 100%;
+                    width: auto;
                     transition: transform .3s;
                 }
-            }
 
-            &:hover {
-                a {
-                    color: $accent-color;
-
-                    i {
+                &:hover {
+                    svg {
+                        @include svg-accent-color;
                         transform: translateY(-3px);
                     }
                 }
