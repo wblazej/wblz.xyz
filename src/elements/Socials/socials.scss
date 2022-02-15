@@ -7,9 +7,10 @@
     padding: 1em;
     top: 50%;
     transform: translateY(-50%);
-    animation: socials $animation-time;
+    @media (min-width: $min-mobile-screen-width) { animation: socials $animation-time; }
     display: flex;
     flex-direction: column;
+    z-index: 5;
 
     .social-icon {
         width: 1.7em;
@@ -85,5 +86,26 @@
 
         bottom: -5em;
         animation: socials-sudo-elements2 $animation-time;
+    }
+}
+
+@media screen and (max-width: $min-mobile-screen-width) {
+    .socials {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: unset;
+        transform: translateY(0px);
+        flex-direction: row;
+        justify-content: center;
+        background-color: $primary-color;
+        padding: .5em;
+        box-shadow: 0 0 15px 1px $box-shadow-color;
+        backdrop-filter: blur(10px);
+        background-color: #0e1725d9;
+
+        &::before, &::after {
+            display: none;
+        }
     }
 }

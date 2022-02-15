@@ -8,8 +8,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 5em;
-    padding-right: 5em;
+    padding-left: 10em;
+    padding-right: 10em;
     margin-bottom: 5em;
 
     p {
@@ -84,6 +84,21 @@ header {
         &:hover {
             color: $primary-font-color;
             box-shadow: 3px 3px 0 0 $accent-color;
+        }
+    }
+}
+
+@media screen and (max-width: $min-mobile-screen-width) {
+    header {
+        padding-left: 2em;
+        padding-right: 2em;
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
         }
     }
 }

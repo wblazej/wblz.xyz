@@ -5,7 +5,6 @@ section.projects {
     .section-content {
         .project {
             display: flex;
-            align-items: center;
             margin-top: 3em;
             margin-bottom: 3em;
             flex-wrap: wrap;
@@ -96,31 +95,33 @@ section.projects {
                 }
             }
 
-            &.from-right {
-                flex-direction: row-reverse;
-
-                .description {
-                    h4 {
-                        text-align: right;
+            @media (min-width: 1000px) {
+                &.from-right {
+                    flex-direction: row-reverse;
+    
+                    .description {
+                        h4 {
+                            text-align: right;
+                        }
+    
+                        p {
+                            transform: translateX(-25%);
+                            text-align: right;
+                        }
+    
+                        .tags {
+                            justify-content: flex-end;
+                        }
                     }
-
-                    p {
-                        transform: translateX(-25%);
-                        text-align: right;
+    
+                    .preview {
+                        &:hover {
+                            box-shadow: -10px 10px 0 0 $accent-color;
+                            transform: translate(5px, -5px);
+                            background-size: 105%;
+                        }
                     }
-
-                    .tags {
-                        justify-content: flex-end;
-                    }
-                }
-
-                .preview {
-                    &:hover {
-                        box-shadow: -10px 10px 0 0 $accent-color;
-                        transform: translate(5px, -5px);
-                        background-size: 105%;
-                    }
-                }
+                }   
             }
 
             &.visible {
@@ -149,7 +150,7 @@ section.projects {
                 
                 .preview {
                     opacity: 1;
-                    animation: preview-animation 1s;
+                    @media (min-width: $min-mobile-screen-width) { animation: preview-animation 1s; }
 
                     @include keyframes-animation(preview-animation) {
                         from { transform: translateX(200%); }
@@ -158,7 +159,7 @@ section.projects {
 
                 &.from-right {
                     .preview {
-                        animation: preview-animation-from-right 1s;
+                        @media (min-width: $min-mobile-screen-width)  { animation: preview-animation-from-right 1s; }
 
                         @include keyframes-animation(preview-animation-from-right) {
                             from { transform: translateX(-200%); }
@@ -173,6 +174,28 @@ section.projects {
             font-family: $secondary-font;
             color: $secondary-font-color;
             margin-top: 5em;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    section.projects {
+        .section-content {
+            .project {
+                flex-direction: column;
+                flex-wrap: nowrap;
+                gap: 1em;
+
+                .description {
+                    p {
+                        width: auto;
+                    }
+                }
+
+                .links {
+                    padding: 0;
+                }
+            }
         }
     }
 }

@@ -3,8 +3,8 @@
 section {
     max-width: 800px;
     margin: 0 auto;
-    padding-left: 5em;
-    padding-right: 5em;
+    padding-left: 10em;
+    padding-right: 10em;
     margin-bottom: 20em;
 
     .header {
@@ -49,5 +49,12 @@ section {
             transform: translateY(0px);
             opacity: 1;
         }
+    }
+}
+
+@media screen and (max-width: $min-mobile-screen-width) {
+    section {
+        padding-left: 2em;
+        padding-right: 2em;
     }
 }

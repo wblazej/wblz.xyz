@@ -53,3 +53,13 @@ nav {
         }
     }
 }
+
+@media screen and (max-width: $min-mobile-screen-width) {
+    nav {
+        justify-content: center;
+
+        a {
+            margin: 0 1em;
+        }
+    }
+}

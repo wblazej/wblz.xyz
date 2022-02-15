@@ -7,10 +7,11 @@ section.about {
         align-items: center;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 3em;
 
         .text {
             flex: 1;
-            min-width: 10em;
+            min-width: 15em;
 
             h4 {
                 font-weight: 400;
@@ -26,9 +27,6 @@ section.about {
             width: 15em;
             height: auto;
             position: relative;
-            margin-left: 2em;
-            margin-top: 2em;
-            margin-bottom: 2em;
 
             &::after {
                 position: absolute;

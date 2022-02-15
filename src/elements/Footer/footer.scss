@@ -26,3 +26,19 @@ footer {
         }
     }
 }
+
+@media screen and (max-width: $min-mobile-screen-width) {
+    footer {
+        padding-bottom: 5em;
+
+        span {
+            &::after {
+                content: '';
+            }
+
+            &:not(:first-child) {
+                display: none;
+            }
+        }
+    }
+}
