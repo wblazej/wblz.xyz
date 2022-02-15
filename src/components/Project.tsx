@@ -26,7 +26,7 @@ const Project = (props: IProps) => {
             setShown(true)
             setVisible(true)
         }
-    }, [isOnScreen])
+    }, [isOnScreen, shown])
 
     return (
         <div ref={projectRef} className={classNames("project", props.fromRight && "from-right", visible && "visible")}>

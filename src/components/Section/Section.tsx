@@ -20,7 +20,7 @@ const Section: React.FunctionComponent<SectionProps> = (props) => {
             setShown(true)
             setVisible(true)
         }
-    }, [isOnScreen])
+    }, [isOnScreen, shown])
 
     return (
         <section {...attributes} className={classNames(props.name, visible && "visible")} ref={sectionRef}>
