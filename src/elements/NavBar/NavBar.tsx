@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './navBar.scss';
 import classNames from 'classnames';
-import { Link } from 'react-scroll';
+import { Link, Button } from 'react-scroll';
 
 const NavBar = () => {
     const [isDown, setIsDown] = useState(window.scrollY > 50)
@@ -16,10 +16,10 @@ const NavBar = () => {
 
     return (
         <nav className={classNames("nav-bar", isDown && "down")}>
-            <Link to="home" smooth={true} spy={true} offset={-200} duration={500}><span>Home</span></Link>
-            <Link to="about" smooth={true} spy={true} offset={-200} duration={500}><span>About</span></Link>
-            <Link to="projects" smooth={true} spy={true} offset={-200} duration={500}><span>Projects</span></Link>
-            <Link to="contact" smooth={true} spy={true} offset={-200} duration={500}><span>Contact</span></Link>
+            <Link href="#home" to="home" smooth={true} spy={true} offset={-200} duration={500}><span>Home</span></Link>
+            <Link href="#about" to="about" smooth={true} spy={true} offset={-200} duration={500}><span>About</span></Link>
+            <Link href="#projects" to="projects" smooth={true} spy={true} offset={-200} duration={500}><span>Projects</span></Link>
+            <Link href="#contact" to="contact" smooth={true} spy={true} offset={-200} duration={500}><span>Contact</span></Link>
         </nav>
     )
 }

@@ -11,7 +11,7 @@ import { DISCORD, EMAIL, GITHUB, GOOGLE_CLOUD, STACKOVERFLOW, TWITTER } from '..
 const Socials = () => {
     return (
         <div className="socials">
-            <a className="social-icon" href={GITHUB} target="_blank" rel="noreferrer">
+            <a aria-label="Link to GitHub profile" className="social-icon" href={GITHUB} target="_blank" rel="noreferrer">
                 <GitHubLogo/>
             </a>
             <div className="social-icon" onClick={() => {
@@ -20,16 +20,16 @@ const Socials = () => {
             }}>
                 <DiscordLogo/>
             </div>
-            <a className="social-icon" href={STACKOVERFLOW} target="_blank" rel="noreferrer">
+            <a aria-label="Link to Stackoverflow profile" className="social-icon" href={STACKOVERFLOW} target="_blank" rel="noreferrer">
                 <StackoverflowLogo/>
             </a>
-            <a className="social-icon" href={TWITTER} target="_blank" rel="noreferrer">
+            <a aria-label="Link to Twitter profile" className="social-icon" href={TWITTER} target="_blank" rel="noreferrer">
                 <TwitterLogo/>
             </a>
-            <a className="social-icon" href={`mailto:${EMAIL}`} rel="noreferrer">
+            <a aria-label="Link to open mail client with new e-mail" className="social-icon" href={`mailto:${EMAIL}`} rel="noreferrer">
                 <Email/>
             </a>
-            <a className="social-icon" href={GOOGLE_CLOUD} rel="noreferrer" target="_blank">
+            <a aria-label="Link to Google Cloud Platform profile" className="social-icon" href={GOOGLE_CLOUD} rel="noreferrer" target="_blank">
                 <GoogleCloudPlatformLogo/>
             </a>
         </div>

@@ -34,6 +34,8 @@ nav {
         margin: 0 1.5em;
         position: relative;
         cursor: pointer;
+        color: $primary-font-color;
+        text-decoration: none;
 
         &::after {
             position: absolute;

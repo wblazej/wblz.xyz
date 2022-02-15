@@ -23,7 +23,7 @@ const Section: React.FunctionComponent<SectionProps> = (props) => {
     }, [isOnScreen, shown])
 
     return (
-        <section {...attributes} className={classNames(props.name, visible && "visible")} ref={sectionRef}>
+        <section {...attributes} id={props.name} className={classNames(props.name, visible && "visible")} ref={sectionRef}>
             <div className="header">
                 <h3>{props.header}</h3>
                 <div className="break-line"></div>

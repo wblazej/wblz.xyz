@@ -38,15 +38,15 @@ const Project = (props: IProps) => {
                 </div>
             </div>
 
-            <a href={props.website} target="_blank" rel="noreferrer" className="preview" 
+            <a aria-label={`Link to deployment of project ${props.title}`} href={props.website} target="_blank" rel="noreferrer" className="preview" 
                 style={{ backgroundImage: `url(${props.previewURL})` }}><div></div></a>
 
             <div className="links">
-                <a href={props.website} target="_blank" rel="noreferrer">
+                <a aria-label={`Link to deployment of project ${props.title}`} href={props.website} target="_blank" rel="noreferrer">
                     <Link/>
                 </a>
                 {props.repo &&
-                    <a href={props.repo} target="_blank" rel="noreferrer">
+                    <a aria-label={`Link to repository of project ${props.title}`} href={props.repo} target="_blank" rel="noreferrer">
                         <GitHubLogo/>
                     </a>
                 }
