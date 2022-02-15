@@ -10,6 +10,7 @@ header {
     justify-content: center;
     padding-left: 5em;
     padding-right: 5em;
+    margin-bottom: 5em;
 
     p {
         @include keyframes-animation(greetings) {

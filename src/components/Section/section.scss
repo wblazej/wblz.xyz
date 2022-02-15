@@ -1,0 +1,53 @@
+@import './../../style/variables';
+
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 5em;
+    padding-right: 5em;
+    margin-bottom: 20em;
+
+    .header {
+        display: flex;
+        align-items: center;
+
+        h3 {
+            font-size: 2rem;
+            position: relative;
+            margin: .5em 0;
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: transform 2s, opacity 2s;
+        }
+
+        .break-line {
+            height: 1px;
+            background-color: $border-color;
+            flex: 0;
+            margin-left: 2em;
+            transition: flex 2s;
+        }
+    }
+
+    .section-content {
+        transform: translateY(100px);
+        opacity: 0;
+        transition: transform 2s, opacity 2s;
+    }
+
+    &.visible {
+        .header {
+            h3 {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+    
+            .break-line { flex: 1; }
+        }
+
+        .section-content {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+}

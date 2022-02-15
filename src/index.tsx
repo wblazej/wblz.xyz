@@ -11,6 +11,7 @@ import About from './elements/About/About';
 import Projects from './elements/Projects/Projects';
 import Footer from './elements/Footer/Footer';
 import Contact from './elements/Contact/Contact';
+import Section from './components/Section/Section';
 
 ReactDOM.render(
 	<React.StrictMode>
@@ -18,9 +19,18 @@ ReactDOM.render(
 		<Socials/>
 		
 		<Element name="home"><Home/></Element>
-		<Element name="about"><About/></Element>
-		<Element name="projects"><Projects/></Element>
-		<Element name="contact"><Contact/></Element>
+
+		<Section name="about" header="About">
+			<About/>
+		</Section>
+
+		<Section name="projects" header="Projects">
+			<Projects/>
+		</Section>
+
+		<Section name="contact" header="Share feedback">
+			<Contact/>
+		</Section>
 
 		<Footer/>
 		
