@@ -53,7 +53,8 @@ section.projects {
                 border-radius: .5em;
                 background-size: 100%;
                 background-position: top;
-                transition: box-shadow .3s, transform .3s, background-size .3s;
+                transition: box-shadow .3s, transform .3s, background-size .3s, opacity 1s;
+                opacity: 0;
 
                 &:hover {
                     box-shadow: 10px 10px 0 0 $accent-color;
@@ -118,6 +119,50 @@ section.projects {
                         box-shadow: -10px 10px 0 0 $accent-color;
                         transform: translate(5px, -5px);
                         background-size: 105%;
+                    }
+                }
+            }
+
+            &.visible {
+                .description .tags div {
+                    $time: 3s;
+                    $start-offset: 30;
+                    $next-offset: 7;
+                    $single-animation-time: 20;
+                    $max-elements: 10;
+
+                    @for $i from 1 through $max-elements {
+                        &:nth-child(#{$i}) {
+                            animation: tags#{$i} $time;
+                        }
+
+                        @include keyframes-animation(tags#{$i}) { 
+                            #{0%}, #{$next-offset * $i + $start-offset}% {
+                                 opacity: 0; 
+                            } 
+                            #{$next-offset * $i + $single-animation-time + $start-offset}% { 
+                                opacity: 1; 
+                            } 
+                        }
+                    }
+                }
+                
+                .preview {
+                    opacity: 1;
+                    animation: preview-animation 1s;
+
+                    @include keyframes-animation(preview-animation) {
+                        from { transform: translateX(200%); }
+                    }
+                }
+
+                &.from-right {
+                    .preview {
+                        animation: preview-animation-from-right 1s;
+
+                        @include keyframes-animation(preview-animation-from-right) {
+                            from { transform: translateX(-200%); }
+                        }
                     }
                 }
             }

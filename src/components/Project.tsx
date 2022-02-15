@@ -2,6 +2,8 @@ import { ReactElement } from 'react';
 import classNames from 'classnames';
 import Link from '../icons/Link';
 import GitHubLogo from '../icons/GitHubLogo';
+import React, { useEffect, useState } from "react";
+import useOnScreen from "./../ts/useOnScreen";
 
 interface IProps {
     title: string;
@@ -14,8 +16,20 @@ interface IProps {
 }
 
 const Project = (props: IProps) => {
+    const projectRef = React.createRef<HTMLDivElement>()
+    const isOnScreen = useOnScreen(projectRef)
+    const [shown, setShown] = useState(false)
+    const [visible, setVisible] = useState(false)
+
+    useEffect(() => {
+        if (isOnScreen && !shown) {
+            setShown(true)
+            setVisible(true)
+        }
+    }, [isOnScreen])
+
     return (
-        <div className={classNames("project", props.fromRight && "from-right")}>
+        <div ref={projectRef} className={classNames("project", props.fromRight && "from-right", visible && "visible")}>
             <div className="description">
                 <h4>{props.title}</h4>
                 <p>{props.description}</p>
