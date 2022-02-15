@@ -1,5 +1,7 @@
 import { ReactElement } from 'react';
 import classNames from 'classnames';
+import Link from '../icons/Link';
+import GitHubLogo from '../icons/GitHubLogo';
 
 interface IProps {
     title: string;
@@ -26,17 +28,13 @@ const Project = (props: IProps) => {
                 style={{ backgroundImage: `url(${props.previewURL})` }}><div></div></a>
 
             <div className="links">
-                <div className="item">
-                    <a href={props.website} target="_blank" rel="noreferrer">
-                        <i className="fas fa-link"></i>
-                    </a>
-                </div>
+                <a href={props.website} target="_blank" rel="noreferrer">
+                    <Link/>
+                </a>
                 {props.repo &&
-                    <div className="item">
-                        <a href={props.repo} target="_blank" rel="noreferrer">
-                            <i className="fab fa-github"></i>
-                        </a>
-                    </div>
+                    <a href={props.repo} target="_blank" rel="noreferrer">
+                        <GitHubLogo/>
+                    </a>
                 }
             </div>
         </div>

@@ -6,3 +6,16 @@
         @content;
     }
 }
+
+@mixin svg-primary-color {
+    * {
+        fill: $primary-font-color;
+        transition: fill .3s;
+    }
+}
+
+@mixin svg-accent-color {
+    * {
+        fill: $accent-color;
+    }
+}

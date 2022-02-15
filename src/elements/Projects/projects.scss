@@ -1,4 +1,5 @@
 @import './../../style/variables';
+@import './../../style/utils';
 
 section.projects {
     .section-content {
@@ -70,22 +71,26 @@ section.projects {
                 justify-content: center;
                 align-items: center;
 
-                .item {
-                    transition: transform .3s;
+                a {
+                    width: 1.5em;
+                    height: 1.5em;
+                    display: block;
+                    text-decoration: none;
+                    margin: .3em;
 
-                    a {
-                        text-decoration: none;
-                        color: $primary-font-color;
-                        font-size: 1.5rem;
-                        margin: .3em;
-                        transition: transform .3s, color .3s;
+                    svg {
+                        @include svg-primary-color;
+                        width: 100%;
+                        height: auto;
+                        transition: transform .3s;
                     }
-                    
+
                     &:hover {
-                        transform: translateY(-3px) !important;
-                        a {
-                            color: $accent-color;
+                        svg {
+                            @include svg-accent-color;
+                            transform: translateY(-3px);
                         }
+                        
                     }
                 }
             }
