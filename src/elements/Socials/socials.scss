@@ -8,6 +8,33 @@
     top: 50%;
     transform: translateY(-50%);
     animation: socials $animation-time;
+    display: flex;
+    flex-direction: column;
+
+    .social-icon {
+        width: 1.7em;
+        height: 1.7em;
+        margin: .4em;
+        display: block;
+        text-decoration: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+
+        svg {
+            @include svg-primary-color;
+            height: 100%;
+            width: 100%;
+            transition: transform .3s;
+        }
+
+        &:hover {
+            svg {
+                @include svg-accent-color;
+                transform: translateY(-3px);
+            }
+        }
+    }
 
     @include keyframes-animation(socials) {
         0%, 30% {
@@ -43,6 +70,7 @@
         top: -5em;
         animation: socials-sudo-elements $animation-time;
     }
+
     &::after {
         @include keyframes-animation(socials-sudo-elements2) {
             0%, 40% {
@@ -57,39 +85,5 @@
 
         bottom: -5em;
         animation: socials-sudo-elements2 $animation-time;
-    }
-
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-
-        li {
-            font-size: 1.5rem;
-            margin: .5em;
-            text-align: center;
-
-            .social-icon {
-                width: 1em;
-                height: 1em;
-                display: block;
-                text-decoration: none;
-                margin: .3em;
-
-                svg {
-                    @include svg-primary-color;
-                    height: 100%;
-                    width: auto;
-                    transition: transform .3s;
-                }
-
-                &:hover {
-                    svg {
-                        @include svg-accent-color;
-                        transform: translateY(-3px);
-                    }
-                }
-            }
-        }
     }
 }
