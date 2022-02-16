@@ -32,6 +32,7 @@ section.projects {
                     display: flex;
                     flex-direction: row;
                     flex-wrap: wrap;
+                    visibility: hidden;
 
                     span {
                         display: block;
@@ -125,9 +126,13 @@ section.projects {
             }
 
             &.visible {
+                .tags {
+                    visibility: visible;
+                }
+                
                 .description .tags div {
                     $time: 3s;
-                    $start-offset: 30;
+                    $start-offset: 0;
                     $next-offset: 7;
                     $single-animation-time: 20;
                     $max-elements: 10;
