@@ -129,11 +129,10 @@ section.projects {
                 .tags {
                     visibility: visible;
                 }
-                
+
                 .description .tags div {
-                    $time: 3s;
-                    $start-offset: 0;
-                    $next-offset: 7;
+                    $time: 2s;
+                    $next-offset: 8;
                     $single-animation-time: 20;
                     $max-elements: 10;
 
@@ -143,10 +142,10 @@ section.projects {
                         }
 
                         @include keyframes-animation(tags#{$i}) { 
-                            #{0%}, #{$next-offset * $i + $start-offset}% {
+                            #{0%}, #{$next-offset * $i}% {
                                  opacity: 0; 
                             } 
-                            #{$next-offset * $i + $single-animation-time + $start-offset}% { 
+                            #{$next-offset * $i + $single-animation-time}% { 
                                 opacity: 1; 
                             } 
                         }
