@@ -1,7 +1,8 @@
-import classNames from "classnames";
-import React, { useEffect, useState } from "react";
-import useOnScreen from "../../ts/useOnScreen";
 import './section.scss';
+
+import React, { useEffect, useState } from "react";
+import classNames from "classnames";
+import useOnScreen from "../../ts/useOnScreen";
 
 export interface SectionProps extends React.HTMLAttributes<HTMLTableSectionElement> {
     name: string;
@@ -9,7 +10,7 @@ export interface SectionProps extends React.HTMLAttributes<HTMLTableSectionEleme
 }
 
 const Section: React.FunctionComponent<SectionProps> = (props) => {
-    const {children, ...attributes} = props;
+    const { children, ...attributes } = props;
     const sectionRef = React.createRef<HTMLTableSectionElement>()
     const isOnScreen = useOnScreen(sectionRef)
     const [shown, setShown] = useState(false)

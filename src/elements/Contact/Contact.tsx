@@ -1,4 +1,5 @@
 import './contact.scss';
+
 import toast from 'react-hot-toast';
 import { EMAIL } from '../../const/settings';
 

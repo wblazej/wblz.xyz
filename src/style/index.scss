@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
-@import './variables';
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap");
+@import "./variables";
 
 body {
     margin: 0;
@@ -21,7 +21,7 @@ body {
     font-size: 1rem;
     cursor: pointer;
     color: $secondary-font-color;
-    transition: color .3s, box-shadow .3s;
+    transition: color 0.3s, box-shadow 0.3s;
     border-radius: 5px;
     text-decoration: none;
     width: fit-content;

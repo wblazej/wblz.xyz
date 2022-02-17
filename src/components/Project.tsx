@@ -1,8 +1,7 @@
-import { ReactElement } from 'react';
+import React, { useEffect, useState, ReactElement } from "react";
 import classNames from 'classnames';
 import Link from '../icons/Link';
 import GitHubLogo from '../icons/GitHubLogo';
-import React, { useEffect, useState } from "react";
 import useOnScreen from "./../ts/useOnScreen";
 
 interface IProps {
@@ -38,16 +37,16 @@ const Project = (props: IProps) => {
                 </div>
             </div>
 
-            <a aria-label={`Link to deployment of project ${props.title}`} href={props.website} target="_blank" rel="noreferrer" className="preview" 
+            <a aria-label={`Link to deployment of project ${props.title}`} href={props.website} target="_blank" rel="noreferrer" className="preview"
                 style={{ backgroundImage: `url(${props.previewURL})` }}><div></div></a>
 
             <div className="links">
                 <a aria-label={`Link to deployment of project ${props.title}`} href={props.website} target="_blank" rel="noreferrer">
-                    <Link/>
+                    <Link />
                 </a>
                 {props.repo &&
                     <a aria-label={`Link to repository of project ${props.title}`} href={props.repo} target="_blank" rel="noreferrer">
-                        <GitHubLogo/>
+                        <GitHubLogo />
                     </a>
                 }
             </div>

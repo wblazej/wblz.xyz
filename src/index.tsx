@@ -1,8 +1,9 @@
+import './style/index.scss';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Toaster } from 'react-hot-toast';
 import { Element } from 'react-scroll';
-import './style/index.scss';
 
 import Home from './elements/Home/Home';
 import NavBar from './elements/NavBar/NavBar';
@@ -15,26 +16,26 @@ import Section from './components/Section/Section';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<NavBar/>
-		<Socials/>
-		
-		<Element name="home"><Home/></Element>
+		<NavBar />
+		<Socials />
+
+		<Element name="home"><Home /></Element>
 
 		<Section name="about" header="About">
-			<About/>
+			<About />
 		</Section>
 
 		<Section name="projects" header="Projects">
-			<Projects/>
+			<Projects />
 		</Section>
 
 		<Section name="contact" header="Share feedback">
-			<Contact/>
+			<Contact />
 		</Section>
 
-		<Footer/>
-		
-		<Toaster 
+		<Footer />
+
+		<Toaster
 			position='bottom-center'
 			toastOptions={{
 				style: {

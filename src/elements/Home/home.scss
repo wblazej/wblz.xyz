@@ -1,5 +1,5 @@
-@import './../../style/variables';
-@import './../../style/utils';
+@import "./../../style/variables";
+@import "./../../style/utils";
 
 header {
     max-width: 1000px;
@@ -32,7 +32,8 @@ header {
 
     h1 {
         @include keyframes-animation(fullname) {
-            0%, 10% {
+            0%,
+            10% {
                 transform: translateY(50px);
                 opacity: 0;
             }
@@ -51,15 +52,16 @@ header {
 
     h2 {
         @include keyframes-animation(title) {
-            0%, 30% {
+            0%,
+            30% {
                 visibility: hidden;
             }
         }
-        
+
         font-size: 2rem;
         color: $secondary-font-color;
         margin: 0;
-        margin-top: .3em;
+        margin-top: 0.3em;
         font-family: $secondary-font;
         font-weight: normal;
         animation: title $animation-time;
@@ -67,7 +69,8 @@ header {
 
     .btn {
         @include keyframes-animation(explore-button) {
-            0%, 70% {
+            0%,
+            70% {
                 transform: translateY(50px);
                 opacity: 0;
             }

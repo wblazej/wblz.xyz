@@ -1,5 +1,6 @@
-import { EMAIL, REPO } from '../../const/settings';
 import './footer.scss';
+
+import { REPO } from '../../const/settings';
 
 const Footer = () => {
     return (

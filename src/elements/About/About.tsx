@@ -1,4 +1,5 @@
 import './about.scss';
+
 import ProfilePicture from './../../img/profile_picture.jpeg';
 
 const About = () => {
@@ -16,7 +17,7 @@ const About = () => {
 
                 <h4>Tools & Platforms</h4>
                 <p>Git, Docker, Google Cloud Platform, GitHub, Figma</p>
-                
+
                 <h4>Operating System</h4>
                 <p>macOS Monterey 12.1</p>
             </div>

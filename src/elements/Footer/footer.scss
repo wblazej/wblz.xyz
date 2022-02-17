@@ -1,4 +1,4 @@
-@import './../../style/variables';
+@import "./../../style/variables";
 
 footer {
     padding: 1.5em;
@@ -10,14 +10,14 @@ footer {
 
         &::after {
             position: absolute;
-            content: '•';
+            content: "•";
             top: 50%;
             transform: translateY(-50%);
-            right: -4px;   
+            right: -4px;
         }
 
         &:last-child::after {
-            content: '';
+            content: "";
         }
 
         a {

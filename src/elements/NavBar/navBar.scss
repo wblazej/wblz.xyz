@@ -1,9 +1,10 @@
-@import './../../style/variables';
-@import './../../style/utils';
+@import "./../../style/variables";
+@import "./../../style/utils";
 
 nav {
     @include keyframes-animation(nav-bar) {
-        0%, 20% {
+        0%,
+        20% {
             transform: translateY(-5em);
         }
         30% {
@@ -24,8 +25,8 @@ nav {
     backdrop-filter: blur(10px);
     animation: nav-bar $animation-time;
     z-index: 5;
-    transition: box-shadow .3s;
-    
+    transition: box-shadow 0.3s;
+
     &.down {
         box-shadow: 0 0 15px 1px $box-shadow-color;
     }
@@ -39,14 +40,14 @@ nav {
 
         &::after {
             position: absolute;
-            content: '';
+            content: "";
             width: 20px;
             height: 2px;
             background-color: $accent-color;
             left: 50%;
             transform: translateX(-50%);
             bottom: -10px;
-            transition: opacity .3s;
+            transition: opacity 0.3s;
             opacity: 0;
         }
 

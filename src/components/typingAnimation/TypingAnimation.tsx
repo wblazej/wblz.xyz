@@ -1,5 +1,6 @@
+import './typingAnimation.scss';
+
 import React, { useEffect, useState } from 'react';
-import './/typingAnimation.scss';
 import classNames from 'classnames';
 import useOnScreen from '../../ts/useOnScreen';
 
@@ -24,7 +25,7 @@ const TypingAnimation = (props: IProps) => {
                 setStartedThread(true)
                 setTimeout(() => {
                     setWhileTyping(true)
-        
+
                     const clock = setInterval(() => {
                         setPosition(position => {
                             if (position === props.text.length - 1) {

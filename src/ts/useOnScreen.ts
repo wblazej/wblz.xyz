@@ -17,9 +17,9 @@ const useOnScreen = (ref: RefObject<HTMLElement>) => {
             observer.observe(ref.current)
 
         return () => { observer.disconnect() }
-        
+
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [ref, height]) 
+    }, [ref, height])
 
     return isVisible
 }
