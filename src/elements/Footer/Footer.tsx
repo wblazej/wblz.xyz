@@ -6,7 +6,6 @@ const Footer = () => {
         <footer>
             <span>&copy; {new Date().getFullYear()} Błażej Wrzosok</span>
             <span><a href={REPO} target="_blank" rel="noreferrer">Source code</a></span>
-            <span>{EMAIL}</span>
         </footer>
     )
 }
