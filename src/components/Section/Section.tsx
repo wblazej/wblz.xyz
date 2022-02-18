@@ -1,8 +1,8 @@
 import './section.scss';
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import classNames from "classnames";
-import useOnScreen from "../../ts/useOnScreen";
+import useWasOnScreen from "../../ts/useWasOnScreen";
 
 export interface SectionProps extends React.HTMLAttributes<HTMLTableSectionElement> {
     name: string;
@@ -12,19 +12,11 @@ export interface SectionProps extends React.HTMLAttributes<HTMLTableSectionEleme
 const Section: React.FunctionComponent<SectionProps> = (props) => {
     const { children, ...attributes } = props;
     const sectionRef = React.createRef<HTMLTableSectionElement>()
-    const isOnScreen = useOnScreen(sectionRef)
-    const [shown, setShown] = useState(false)
-    const [visible, setVisible] = useState(false)
-
-    useEffect(() => {
-        if (isOnScreen && !shown) {
-            setShown(true)
-            setVisible(true)
-        }
-    }, [isOnScreen, shown])
+    const wasOnScreen = useWasOnScreen(sectionRef)
 
     return (
-        <section {...attributes} id={props.name} className={classNames(props.name, visible && "visible")} ref={sectionRef}>
+        <section {...attributes} id={props.name} ref={sectionRef}
+            className={classNames(props.name, wasOnScreen && "visible")}>
             <div className="header">
                 <h3>{props.header}</h3>
                 <div className="break-line"></div>

@@ -1,13 +1,13 @@
 import { useState, useEffect, RefObject } from "react"
 import useWindowSize from "./useWindowSize"
 
-const useOnScreen = (ref: RefObject<HTMLElement>) => {
+const useWasOnScreen = (ref: RefObject<HTMLElement>) => {
     const { height } = useWindowSize()
-    const [isVisible, setVisible] = useState(false)
+    const [wasOnScreen, setWasOnScreen] = useState(false)
 
     useEffect(() => {
         const observer = new IntersectionObserver(
-            ([entry]) => setVisible(entry.isIntersecting),
+            ([entry]) => entry.isIntersecting && !wasOnScreen && setWasOnScreen(true),
             {
                 "rootMargin": `-${height / 3}px 0px`,
             }
@@ -21,7 +21,7 @@ const useOnScreen = (ref: RefObject<HTMLElement>) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [ref, height])
 
-    return isVisible
+    return wasOnScreen
 }
 
-export default useOnScreen;
+export default useWasOnScreen;

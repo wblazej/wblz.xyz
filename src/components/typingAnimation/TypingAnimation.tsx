@@ -2,7 +2,7 @@ import './typingAnimation.scss';
 
 import React, { useEffect, useState } from 'react';
 import classNames from 'classnames';
-import useOnScreen from '../../ts/useOnScreen';
+import useWasOnScreen from '../../ts/useWasOnScreen';
 
 interface IProps {
     text: string;
@@ -17,11 +17,11 @@ const TypingAnimation = (props: IProps) => {
     const [whileTyping, setWhileTyping] = useState(false)
     const [startedThread, setStartedThread] = useState(false)
 
-    const isVisible = useOnScreen(element)
+    const wasOnScreen = useWasOnScreen(element)
 
     useEffect(() => {
         if (!startedThread) {
-            if (!props.startOnDisplay || (props.startOnDisplay && isVisible)) {
+            if (!props.startOnDisplay || (props.startOnDisplay && wasOnScreen)) {
                 setStartedThread(true)
                 setTimeout(() => {
                     setWhileTyping(true)
@@ -38,7 +38,7 @@ const TypingAnimation = (props: IProps) => {
                 }, props.delay ? props.delay : 0)
             }
         }
-    }, [props, setPosition, isVisible, startedThread])
+    }, [props, setPosition, wasOnScreen, startedThread])
 
     return (
         <span className="typing-animation" ref={element}>
