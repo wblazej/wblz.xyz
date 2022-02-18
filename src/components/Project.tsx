@@ -1,8 +1,8 @@
-import React, { useEffect, useState, ReactElement } from "react";
+import React, { ReactElement } from "react";
 import classNames from 'classnames';
 import Link from '../icons/Link';
 import GitHubLogo from '../icons/GitHubLogo';
-import useOnScreen from "./../ts/useOnScreen";
+import useWasOnScreen from "../ts/useWasOnScreen";
 
 interface IProps {
     title: string;
@@ -16,19 +16,10 @@ interface IProps {
 
 const Project = (props: IProps) => {
     const projectRef = React.createRef<HTMLDivElement>()
-    const isOnScreen = useOnScreen(projectRef)
-    const [shown, setShown] = useState(false)
-    const [visible, setVisible] = useState(false)
-
-    useEffect(() => {
-        if (isOnScreen && !shown) {
-            setShown(true)
-            setVisible(true)
-        }
-    }, [isOnScreen, shown])
+    const wasOnScreen = useWasOnScreen(projectRef)
 
     return (
-        <div ref={projectRef} className={classNames("project", props.fromRight && "from-right", visible && "visible")}>
+        <div ref={projectRef} className={classNames("project", props.fromRight && "from-right", wasOnScreen && "visible")}>
             <div className="description">
                 <h4>{props.title}</h4>
                 <p>{props.description}</p>
