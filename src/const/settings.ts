@@ -1,4 +1,4 @@
-export const EMAIL = "blazej.wrzosok@gmail.com"
+export const EMAIL = "hi@wblz.xyz"
 export const DISCORD = "wblazej#6957"
 export const GITHUB = "https://github.com/wblazej"
 export const STACKOVERFLOW = "https://stackoverflow.com/users/13574070"
