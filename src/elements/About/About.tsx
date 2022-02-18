@@ -1,13 +1,23 @@
 import './about.scss';
 
+import { useEffect, useState } from "react";
 import ProfilePicture from './../../img/profile_picture.jpeg';
+import { GET_AGE_REQUEST } from '../../const/settings';
 
 const About = () => {
+    const [age, setAge] = useState(0)
+
+    useEffect(() => {
+        // fancy way to hide birth date with cloud functions :D
+        fetch(GET_AGE_REQUEST)
+        .then(res => res.json())
+        .then(data => setAge(data.age))
+    })
 
     return (
         <>
             <div className="text">
-                <p>Hey, my name is Błażej and I'm a full stack software developer and cybersecurity researcher from Poland. Currently, I'm a 17 years old high school student. I really enjoy my job and try to do my best every single day.</p>
+                <p>Hey, my name is Błażej and I'm a full stack software developer and cybersecurity researcher from Poland. Currently, I'm a {age} years old high school student. I really enjoy my job and try to do my best every single day.</p>
 
                 <h4>Tech Stack</h4>
                 <p>HTML, CSS, JavaScript, TypeScript, Python, Ruby, SQL, C++</p>
