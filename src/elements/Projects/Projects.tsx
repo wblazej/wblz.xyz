@@ -32,7 +32,7 @@ const Projects = () => {
                     <WebScrapping />,
                     <ClosedSource />
                 ]}
-                website="https://sars2.wsi.edu.pl/"
+                website="https://covid.wblz.xyz/"
                 previewURL={CovidWarningAppPreview}
             />
 
