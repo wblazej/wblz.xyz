@@ -45,7 +45,7 @@ const Projects = () => {
                     <GitHubAPI />,
                     <College />
                 ]}
-                website="https://wblazej.github.io/GitGist/"
+                website="https://gists.wblz.xyz/"
                 repo="https://github.com/wblazej/GitGist"
                 previewURL={GitGistPreview}
                 fromRight={true}
