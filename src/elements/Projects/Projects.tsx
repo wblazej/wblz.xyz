@@ -18,6 +18,7 @@ import TypeScript from '../../components/tags/TypeScript';
 import Learning from '../../components/tags/Learning';
 import Sass from '../../components/tags/Sass';
 import Math from '../../components/tags/Math';
+import { GITHUB } from '../../const/settings';
 
 const Projects = () => {
     return (
@@ -81,7 +82,7 @@ const Projects = () => {
                 fromRight={true}
             />
 
-            <a target="_blank" rel="noreferrer" className="btn" href="https://github.com/wblazej?tab=repositories">See others</a>
+            <a target="_blank" rel="noreferrer" className="btn" href={`${GITHUB}?tab=repositories`}>See others</a>
         </>
     )
 }
