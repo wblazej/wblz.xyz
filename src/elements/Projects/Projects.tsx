@@ -3,6 +3,7 @@ import './projects.scss';
 import CovidWarningAppPreview from './../../img/projects/covid-warning-app.png';
 import GitGistPreview from './../../img/projects/git-gist.png';
 import VocabularyPreview from './../../img/projects/vocabulary.png';
+import PyFractPreview from './../../img/projects/pyfract.png';
 
 import Python from '../../components/tags/Python';
 import Reactjs from '../../components/tags/Reactjs';
@@ -16,6 +17,7 @@ import Nextjs from '../../components/tags/Nextjs';
 import TypeScript from '../../components/tags/TypeScript';
 import Learning from '../../components/tags/Learning';
 import Sass from '../../components/tags/Sass';
+import Math from '../../components/tags/Math';
 
 const Projects = () => {
     return (
@@ -64,6 +66,19 @@ const Projects = () => {
                 website="https://quiz.v.fkrq.xyz/"
                 repo="https://github.com/wblazej/vocabulary"
                 previewURL={VocabularyPreview}
+            />
+
+            <Project
+                title="PyFract"
+                description="A simple implementation of fraction numbers in Python. In some cases it is better than default Python library for fractions."
+                tags={[
+                    <Python />,
+                    <Math />
+                ]}
+                website="https://pypi.org/project/pyfract/"
+                repo="https://github.com/wblazej/pyfract"
+                previewURL={PyFractPreview}
+                fromRight={true}
             />
 
             <a target="_blank" rel="noreferrer" className="btn" href="https://github.com/wblazej?tab=repositories">See others</a>
