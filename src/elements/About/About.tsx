@@ -12,7 +12,7 @@ const About = () => {
         fetch(GET_AGE_REQUEST)
         .then(res => res.json())
         .then(data => setAge(data.age))
-    })
+    }, [])
 
     return (
         <>
