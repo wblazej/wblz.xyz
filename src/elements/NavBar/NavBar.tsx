@@ -33,7 +33,7 @@ const NavBar = () => {
             </Link>
 
             <Link href="#contact" to="contact" smooth={true}
-                spy={true} offset={-200} duration={500}>
+                spy={true} offset={-300} duration={500}>
                 <span>Contact</span>
             </Link>
         </nav>

@@ -29,7 +29,7 @@ ReactDOM.render(
 			<Projects />
 		</Section>
 
-		<Section name="contact" header="Share feedback">
+		<Section name="contact" header="Contact">
 			<Contact />
 		</Section>
 

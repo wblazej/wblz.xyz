@@ -6,7 +6,7 @@ import { EMAIL } from '../../const/settings';
 const Contact = () => {
     return (
         <>
-            <p>I'd love to hear from you. Share some feedback or just say hello</p>
+            <p>I'd love to hear from you. Feel free to share some feedback or just say hello</p>
 
             <div className="buttons">
                 <a className='btn' href={`mailto:${EMAIL}`}>Send e-mail</a>
