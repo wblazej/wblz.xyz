@@ -29,7 +29,7 @@ const About = () => {
                 <p>Git, Docker, Google Cloud Platform, GitHub, Figma, Vercel, Cloudflare</p>
 
                 <h4>Operating System</h4>
-                <p>macOS Monterey 12.3.1</p>
+                <p>macOS Monterey 12.4</p>
             </div>
             <div className="profile-picutre">
                 <img src={ProfilePicture} alt="profile" />
