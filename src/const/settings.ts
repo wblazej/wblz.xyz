@@ -1,5 +1,5 @@
 export const EMAIL = "hi@wblz.xyz"
-export const DISCORD = "wblazej#6957"
+export const DISCORD = "wblazej#0854"
 export const GITHUB = "https://github.com/wblazej"
 export const STACKOVERFLOW = "https://stackoverflow.com/users/13574070"
 export const TWITTER = "https://twitter.com/wblazej_"
