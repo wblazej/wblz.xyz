@@ -64,7 +64,7 @@ const Projects = () => {
                     <Nextjs />,
                     <Learning />
                 ]}
-                website="https://quiz.v.fkrq.xyz/"
+                website="https://wblazej.github.io/vocabulary/"
                 repo="https://github.com/wblazej/vocabulary"
                 previewURL={VocabularyPreview}
             />
