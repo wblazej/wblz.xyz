@@ -16,7 +16,7 @@ const About = () => {
     return (
         <>
             <div className="text">
-                <p>Hey, my name is Błażej and I'm a full stack software developer and cybersecurity researcher from Poland. Right now, as the industry changes dynamically, my interests are heading towards blockchain technology and machine learning. As a side hobby, I make research on cryptocurrency markets and learn how to make profit from trading. Currently, I'm a {age} years old high school student. I really enjoy my job and try to do my best every single day.</p>
+                <p>Hey, my name is Błażej and I'm a full stack software developer and cybersecurity researcher from Poland. As the industry continues to evolve, my current interests are focused on blockchain technology and machine learning. In my free time, I enjoy researching cryptocurrency markets and trading crypto tokens. Despite being an {age} years old high school student, I am really passionate about my work and strive to do my best every day.</p>
 
                 <h4>Tech Stack</h4>
                 <p>TypeScript, Python, Ruby, SQL, C++, HTML, CSS, JavaScript</p>
