@@ -24,9 +24,13 @@ section.about {
         }
 
         .profile-picutre {
-            width: 15em;
-            height: auto;
+            width: 17em;
+            aspect-ratio: 1/1;
             position: relative;
+            background-image: url('./../../img/profile_picture.jpeg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
 
             &::after {
                 position: absolute;

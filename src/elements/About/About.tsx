@@ -1,7 +1,6 @@
 import './about.scss';
 
 import { useEffect, useState } from "react";
-import ProfilePicture from './../../img/profile_picture.jpeg';
 import { GET_AGE_REQUEST } from '../../const/settings';
 
 const About = () => {
@@ -31,9 +30,7 @@ const About = () => {
                 <h4>Operating System</h4>
                 <p>macOS Ventura 13.3.1</p>
             </div>
-            <div className="profile-picutre">
-                <img src={ProfilePicture} alt="profile" />
-            </div>
+            <div className="profile-picutre"></div>
         </>
     )
 }
