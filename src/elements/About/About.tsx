@@ -28,7 +28,7 @@ const About = () => {
                 <p>Git, Docker, Google Cloud Platform, GitHub, Figma, Vercel, Cloudflare, OpenAI</p>
 
                 <h4>Operating System</h4>
-                <p>macOS Ventura 13.3.1</p>
+                <p>macOS Ventura 13.4.1</p>
             </div>
             <div className="profile-picutre"></div>
         </>
